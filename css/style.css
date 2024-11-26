@@ -197,14 +197,13 @@ nav ul li a:hover {
 
 .landing-container {
     position: relative;
-    height: 60vh; 
-    background: url('../images/online-shopping-website.png') no-repeat center;
-    background-size: cover;
-    color: white;
+    height: 60vh;
+    min-height: 60vh;
+    background: url('../images/online-shopping-website.png');
+    /* background-size: cover; */
+    /* color: white;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
+    justify-content: center; */
 }
 
 .cart-container {
