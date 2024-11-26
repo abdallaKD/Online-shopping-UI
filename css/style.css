@@ -83,7 +83,7 @@ body{
     align-items: center;
     width: 40px;
     height: 40px;
-    background-color: #febd69; 
+    background-color: #ffae46; 
     border-radius: 15px; 
     transition: transform 0.3s ease, background-color 0.3s ease;
     cursor: pointer;
@@ -230,7 +230,7 @@ nav ul li a:hover {
     position: relative;
     height: 60vh;
     min-height: 60vh;
-    background: url('../images/toy-shopping.jpg ') center;
+    background: url('../images/black_fri.avif') center;
     background-size: cover;
     border-radius: 5px;
 }
