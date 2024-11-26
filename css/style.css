@@ -14,7 +14,7 @@ body{
     justify-content: space-between;
     align-items: center;
     padding: 10px;
-    background-color: #eee; 
+    background-color: #232f3e; 
 }
 
 .nav-container {
@@ -83,7 +83,7 @@ body{
     align-items: center;
     width: 40px;
     height: 40px;
-    background-color: #798ca1; 
+    background-color: #febd69; 
     border-radius: 15px; 
     transition: transform 0.3s ease, background-color 0.3s ease;
     cursor: pointer;
@@ -92,7 +92,7 @@ body{
 
 .microphone:hover {
     transform: scale(1.1); 
-    background-color: #5a6b7c; 
+    background-color: #ba8239; 
 }
 
 .fa-microphone {
@@ -123,13 +123,14 @@ nav ul {
 
 nav ul li a {
     text-decoration: none;
-    color: #333; 
+    color: #fff; 
     padding: 5px 10px;
     transition: color 0.3s, background-color 0.5s;
     
 }
 nav ul li{
     border-left-style: solid;
+    border-color: #febd69;
     border-width: 1px;
     padding-left: 10px;
 }
@@ -140,7 +141,7 @@ nav ul li:first-child{
 
 nav ul li a:hover {
     border-radius: 10px;
-    color: #007bff;
+    color: #febd69;
 }
 .chatbot-container {
     position: fixed;
@@ -152,7 +153,7 @@ nav ul li a:hover {
 .chatbot-icon {
     width: 60px;
     height: 60px;
-    background-color: #456485;
+    background-color: #ff6200;
     color: #fff;
     border-radius: 25px;
     display: flex;
@@ -165,7 +166,7 @@ nav ul li a:hover {
 }
 
 .chatbot-icon:hover {
-    background-color: #2e3e50;
+    background-color: #ba8239   ;
     transform: scale(1.1);
 }
 /* ////////////////////////// */
@@ -179,18 +180,19 @@ nav ul li a:hover {
     position: sticky;
     top: 0;
     width: 250px;
-    background-color: #333;
+    background-color: #232f3e;
     color: white;
     padding: 20px;
     box-sizing: border-box;
     margin-top: 20px;
     height: fit-content;
+    border-radius: 5px;
 }
 
 .sidebar h2 {
-    color: #fff;
+    color: #febd69;
     margin-top: 0;
-    border-bottom-color: white;
+    border-bottom-color: #febd69;
     border-bottom-style: solid;
     padding-bottom: 10px;
 }
@@ -210,10 +212,11 @@ nav ul li a:hover {
     font-size: 18px;
     display: block;
     padding: 8px 0;
+    transition: all 0.3s;
 }
 
 .sidebar ul li a:hover {
-    background-color: #555;
+    color: #febd69;
 }
 .content-container {
     flex-grow: 1; 
@@ -227,8 +230,9 @@ nav ul li a:hover {
     position: relative;
     height: 60vh;
     min-height: 60vh;
-    background: url('../images/online-shopping-website.png');
+    background: url('../images/toy-shopping.jpg ') center;
     background-size: cover;
+    border-radius: 5px;
 }
 
 .cart-container {
@@ -236,6 +240,7 @@ nav ul li a:hover {
     background-color: #f4f4f4;
     box-sizing: border-box;
     margin-top: 20px;
+    border-radius: 10px;
 }
 
 .drop-down-menu{
@@ -281,9 +286,7 @@ nav ul li a:hover {
     }
 }
 
-
-/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
+.cart-container
 .category-products {
     display: flex;
     flex-direction: column;
@@ -299,20 +302,23 @@ nav ul li a:hover {
 
 .category-products .category-products-header h2 {
     font-size: 40px;
+    color: #232f3e; 
 }
 
 .category-products .category-products-header button {
-    border-radius: 5px;
+    border-radius: 10px;
     width: 125px;
     height: 50px;
     font-size: 20px;
+    color: #febd69;
     border-color: rgba(0, 0, 0, 0);
-    background-color: #e4ecb1;
+    background-color: #232f3e;
     transition: all ease-in-out 0.3s;
 }
 .category-products .category-products-header button:hover {
-    box-shadow: 5px 5px #2e3e50;
-    background-color: white;
+    scale: 1.1;
+    color: #232f3e;
+    background-color: #febd69;
 }
 
 .cards {
@@ -329,7 +335,14 @@ nav ul li a:hover {
     padding: 5px;
     border-radius: 10px;
     margin: 10px 0;
-    border: solid #000011 1px;
+    border: groove #232f3e 1px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.card:hover{
+    scale: 1.05;
+    border: groove #232f3e65 1px;
 }
 
 .category-products .category-products-header h2 {
@@ -358,8 +371,7 @@ nav ul li a:hover {
     font-size: 20px;
     color: #555;
     cursor: pointer;
-    transition: all
-     ease-in-out 0.3s;
+    transition: all ease-in-out 0.3s;
 }
 
 .product-image::before:hover::before {
@@ -367,7 +379,7 @@ nav ul li a:hover {
 }
 
 .product-image img {
-    width: 170px; /* Preserve the aspect ratio */
+    width: 170px; 
     object-fit: cover; /* Make the image cover the container */
     object-position: center top; /* Align the image to clip from the bottom */
 }
@@ -417,7 +429,7 @@ nav ul li a:hover {
 
 .add-to-cart button:hover i{
     scale: 1.1;
-    color: #333333c7;
+    color: #ff6200;
 }
 
 .add-to-cart button i{
@@ -436,7 +448,7 @@ nav ul li a:hover {
 
 .add-to-cart div i {
     cursor: pointer;
-    color: gold;
+    color: #ff6200;
 }
 
 .add-to-cart div i:click {
