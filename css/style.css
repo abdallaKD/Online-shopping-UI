@@ -31,7 +31,7 @@ body{
 
 .search-wrapper {
     position: relative;
-    width: 100%;
+    width: 50%;
     max-width: 1000px; 
     margin-left: auto;
 }
@@ -41,12 +41,31 @@ body{
     padding: 10px 40px 10px 10px; 
     border: 1px solid #ccc;
     border-radius: 5px;
+    position: relative;
     font-size: 16px;
 }
+
+.search-wrapper::before {
+    content: "\f002";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    font-size: 16px;
+    z-index: 50;
+    color: #aaa;
+}
+
 #search-bar:focus {
     border-color: #789abe; 
     outline: none;
 }
+
+#search-bar:focus::placeholder {
+    color: white;
+}
+
 .search-icon {
     position: absolute; 
     top: 50%;
@@ -101,6 +120,7 @@ nav ul {
     padding: 0;
     gap: 12px;  
 }
+
 nav ul li a {
     text-decoration: none;
     color: #333; 
@@ -113,6 +133,11 @@ nav ul li{
     border-width: 1px;
     padding-left: 10px;
 }
+
+nav ul li:first-child{
+    border-width: 0px;
+}
+
 nav ul li a:hover {
     border-radius: 10px;
     color: #007bff;
@@ -146,10 +171,13 @@ nav ul li a:hover {
 /* ////////////////////////// */
 .main-container {
     padding: 0px 100px;
+    position: relative;
     display: flex;
     height: 100vh;
 }
 .sidebar {
+    position: sticky;
+    top: 0;
     width: 250px;
     background-color: #333;
     color: white;
@@ -200,14 +228,11 @@ nav ul li a:hover {
     height: 60vh;
     min-height: 60vh;
     background: url('../images/online-shopping-website.png');
-    /* background-size: cover; */
-    /* color: white;
-    display: flex;
-    justify-content: center; */
+    background-size: cover;
 }
 
 .cart-container {
-    padding: 20px;
+    padding: 10px;
     background-color: #f4f4f4;
     box-sizing: border-box;
     margin-top: 20px;
@@ -278,8 +303,8 @@ nav ul li a:hover {
 
 .category-products .category-products-header button {
     border-radius: 5px;
-    width: 100px;
-    height: 70px;
+    width: 125px;
+    height: 50px;
     font-size: 20px;
     border-color: rgba(0, 0, 0, 0);
     background-color: #e4ecb1;
@@ -291,19 +316,20 @@ nav ul li a:hover {
 }
 
 .cards {
-    margin: 20px;
+    margin: 5px;
     /* padding: 30px 0 0 0; */
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: space-between;
 }
 
 .card {
-    background-color: #e4ecb1;
+    background-color: white;
     width: fit-content;
     padding: 5px;
     border-radius: 10px;
-    margin: 10px;
+    margin: 10px 0;
+    border: solid #000011 1px;
 }
 
 .category-products .category-products-header h2 {
@@ -313,13 +339,37 @@ nav ul li a:hover {
 .product-image {
     display: flex;
     justify-content: center;
+    width: 100%;
     padding: 5px;
-    border-radius: 20px;
+    height: 230px;
+    border-radius: 10px;
     overflow: hidden;
+    align-items: center;
+    position: relative;
+}
+
+.product-image::before {
+    content: '\f004';
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    font-size: 20px;
+    color: #555;
+    cursor: pointer;
+    transition: all
+     ease-in-out 0.3s;
+}
+
+.product-image::before:hover::before {
+    color: red; /* Change color on hover */
 }
 
 .product-image img {
-    width: 230px;
+    width: 170px; /* Preserve the aspect ratio */
+    object-fit: cover; /* Make the image cover the container */
+    object-position: center top; /* Align the image to clip from the bottom */
 }
 
 .product-details {
@@ -331,7 +381,7 @@ nav ul li a:hover {
 }
 
 .product-details .product-name {
-    font-size: 20px;
+    font-size: 15px;
     font-weight: 500;
 }
 
@@ -340,9 +390,54 @@ nav ul li a:hover {
 }
 
 .product-price > span {
-    font-size: 15px;
+    font-size: 10px;
+}
+
+.product-price > span:last-child{
+    color: rgba(255, 0, 0, 0.615);
 }
 
 .product-price > b {
+    font-size: 20px;
+    color: rgba(0, 128, 0, 0.696);
+}
+
+.add-to-cart {
+    display: flex;
+    padding: 10px;
+    justify-content: space-between;
+}
+
+.add-to-cart button {
+    border: none;
+    background-color: rgba(0, 0, 0, 0);
+    /* padding: 10px; */
+    cursor: pointer;
+}
+
+.add-to-cart button:hover i{
+    scale: 1.1;
+    color: #333333c7;
+}
+
+.add-to-cart button i{
     font-size: 25px;
+    transition: all ease-in-out 0.3s;
+}
+
+.add-to-cart div {
+    display: flex;
+    align-items: center;
+}
+
+.add-to-cart div > * {
+    margin: 2px;
+}
+
+.add-to-cart div i {
+    cursor: pointer;
+    color: gold;
+}
+
+.add-to-cart div i:click {
 }
