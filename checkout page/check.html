@@ -22,7 +22,7 @@
         integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
         crossorigin="anonymous" referrerpolicy="no-referrer">
     <link href="../carousel/carousel.css" rel="stylesheet">
-    <script src="../home page/function.js"></script>
+    <!-- <script src="../home page/function.js"></script> -->
 </head> 
 <body style="background: #f6f2f2;">
     
@@ -73,6 +73,8 @@
         </div>
     </header>
 
+    
+    <div id="popup" class="popup"></div>
     <div class="checkout-main">
         <h2 class="checkout-title">Order Checkout</h2>
     
@@ -102,8 +104,8 @@
         <div class="shipping-address">
             <h3 class="section-title">Shipping Address</h3>
             <div class="name-inputs">
-                <input type="text" id="username" class="input-field" placeholder="First name">
-                <input type="text" id="username" class="input-field" placeholder="second name">
+                <input type="text" id="firstname" class="input-field" placeholder="First name">
+                <input type="text" id="lastname" class="input-field" placeholder="second name">
             </div>
             <input type="text" id="address" class="input-field" placeholder="Address">
             <input type="text" id="city" class="input-field" placeholder="City">
@@ -146,5 +148,6 @@
             </div>
         </div>
     </div>
+    <script src="script.js"></script>
 </body>
 </html>
