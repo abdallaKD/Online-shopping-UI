@@ -146,29 +146,120 @@ nav ul li a:hover {
 .chatbot-container {
     position: fixed;
     bottom: 20px;
-    right: 20px; 
+    right: 20px;
     z-index: 1000;
 }
 
 .chatbot-icon {
-    width: 60px;
-    height: 60px;
-    background-color: #ff6200;
-    color: #fff;
-    border-radius: 25px;
+    background-color: #232f3e;
+    color: white;
+    border-radius: 10px;
+    width: 50px;
+    height: 50px;
     display: flex;
-    justify-content: center;
     align-items: center;
-    font-size: 24px;
+    justify-content: center;
     cursor: pointer;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    transition: transform 0.3s ease, background-color 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s;
 }
 
 .chatbot-icon:hover {
-    background-color: #ba8239   ;
-    transform: scale(1.1);
+    scale: 1.1;
 }
+
+.chatbot-icon i {
+    font-size: 24px;
+}
+
+.chatbot-window {
+    display: none;
+    position: fixed;
+    bottom: 80px;
+    right: 20px;
+    width: 300px;
+    background: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    overflow: hidden;
+    flex-direction: column;
+    z-index: 1001;
+}
+
+.chatbot-header {
+    background-color: #232f3e;
+    color: white;
+    padding: 10px;
+    font-size: 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.chatbot-header .close-btn {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.chatbot-body {
+    padding: 10px;
+    height: 200px;
+    overflow-y: auto;
+    font-size: 14px;
+}
+
+.chatbot-footer {
+    display: flex;
+    padding: 10px;
+    border-top: 1px solid #ddd;
+}
+
+.chatbot-footer input {
+    flex: 1;
+    padding: 8px;
+    font-size: 14px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.chatbot-footer button {
+    margin-left: 5px;
+    padding: 8px 12px;
+    background-color: #febd69;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.chatbot-footer button:hover {
+    background-color: #232f3e;
+}
+
+#scrollToTopButton {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    /* display: none; */
+    background-color: #232f3e;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+    font-size: 16px;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s;
+  }
+  
+  #scrollToTopButton:hover {
+    background-color: #febd69;
+  }
+
 /* ////////////////////////// */
 .main-container {
     padding: 0px 100px;
@@ -226,12 +317,14 @@ nav ul li a:hover {
     box-sizing: border-box;
 }
 
+
 .landing-container {
     position: relative;
     height: 60vh;
     min-height: 60vh;
-    background: url('../images/toy-shopping.jpg ') center;
+    width: 1050px;
     background-size: cover;
+    overflow: hidden;
     border-radius: 5px;
 }
 
