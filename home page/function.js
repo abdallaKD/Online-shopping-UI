@@ -28,3 +28,57 @@ document.getElementById('chatInput').addEventListener('keydown', function (event
         event.preventDefault(); // Prevent default form submission behavior
     }
 });
+
+// Cart shopping sound
+const buttons = document.querySelectorAll('.soundButton');
+const audio = document.getElementById('buttonSound');
+buttons.forEach(button => {
+    button.addEventListener('click', () => {
+        audio.currentTime = 0; 
+        audio.play(); 
+    });
+});
+
+// Microphone sound
+const micButton = document.getElementById('microphoneButton');
+const micAudio = document.getElementById('microphoneSound');
+micButton.addEventListener('click', () => {
+    micAudio.currentTime = 0; 
+    micAudio.play(); 
+});
+
+
+
+function removeProduct(button) {
+    const productElement = button.closest('.my-product');
+    if (productElement) {
+        productElement.remove();
+        updateCartSummary();
+    }
+}
+function updateTotal(element) {
+    const product = element.closest('.my-product');
+    const price = parseFloat(product.getAttribute('data-price'));
+    const quantity = parseInt(element.value);
+    product.setAttribute('data-quantity', quantity);
+    calculateTotal();
+}
+
+function removeProduct(button) {
+    const product = button.closest('.my-product');
+    product.remove();
+    calculateTotal();
+}
+
+function calculateTotal() {
+    const products = document.querySelectorAll('.my-product');
+    let total = 0;
+    products.forEach(product => {
+        const price = parseFloat(product.getAttribute('data-price'));
+        const quantity = parseInt(product.getAttribute('data-quantity'));
+        total += price * quantity;
+    });
+    document.getElementById('total-price').innerText = `$${total.toFixed(2)}`;
+}
+
+calculateTotal();
