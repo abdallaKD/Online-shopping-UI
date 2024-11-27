@@ -82,3 +82,5 @@ function calculateTotal() {
 }
 
 calculateTotal();
+
+

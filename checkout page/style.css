@@ -249,27 +249,6 @@ nav ul li a:hover {
     background-color: #232f3e;
 }
 
-#scrollToTopButton {
-    position: fixed;
-    bottom: 20px;
-    left: 20px;
-    /* display: none; */
-    background-color: #232f3e;
-    color: white;
-    border: none;
-    border-radius: 10px;
-    padding: 10px 15px;
-    font-size: 16px;
-    cursor: pointer;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    transition: all 0.3s;
-}
-
-#scrollToTopButton:hover {
-    background-color: #febd69;
-}
-
-
 .drop-down-menu{
     position: absolute;
     right: 2rem;
@@ -303,20 +282,10 @@ nav ul li a:hover {
     opacity: 0.6;
 }
 
-@media (max-width: 900px) {
-    .nav-container{
-        display: block;
-    }
-
-    .search-wrapper input {
-        font-size: 10px;
-    }
-}
-
-.cart-main {
+.checkout-main {
     display: flex;
     flex-direction: column;
-    max-width: 1200px;
+    max-width: 900px;
     margin: 20px auto;
     background-color: #fff;
     border-radius: 8px;
@@ -324,197 +293,120 @@ nav ul li a:hover {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.cart-head {
-    margin-bottom: 20px;
-}
-
-.cart-head h2 {
+.checkout-title {
     font-size: 24px;
-    color: #333;
-}
-
-.cart-head span {
-    font-size: 16px;
-    color: #777;
-}
-
-.pro-and-check {
-    display: flex;
-    justify-content: space-between;
-}
-
-.cart-products {
-    width: 65%;
-    padding-right: 20px;
-    border-right: 2px solid #eee;
-}
-
-.my-product {
-    display: flex;
+    font-weight: bold;
     margin-bottom: 20px;
-    border-bottom: 1px solid #eee;
-    padding-bottom: 15px;
-    padding-top: 15px;
-}
-
-.product-img {
-    width: 100px;
-    height: 100px;
-    /* object-fit: cover; */
-    margin-right: 20px;
-}
-
-.product-details {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    width: 100%;
-}
-
-.product-details h3 {
-    font-size: 18px;
-    color: #333;
-}
-
-.product-info,
-.product-shipping,
-.product-seller,
-.product-price {
-    font-size: 14px;
-    color: #555;
-    margin-bottom: 5px;
-}
-
-.product-price{
-    color: #232f3e;
-    font-weight: 500;
-}
-
-.product-actions {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-top: 10px;
-}
-
-.remove-btn {
-    background-color: #ff4d4d;
-    border: none;
-    color: white;
-    padding: 8px 15px;
-    cursor: pointer;
-    font-size: 14px;
-    border-radius: 4px;
-    transition: background-color 0.3s ease;
-}
-
-.remove-btn:hover {
-    background-color: #e60000;
-}
-
-.quantity-container {
-    display: flex;
-    align-items: center;
-}
-
-.quantity-container label {
-    font-size: 14px;
-    color: #333;
-    margin-right: 10px;
-}
-
-.quantity-dropdown {
-    padding: 5px;
-    font-size: 14px;
-    border-radius: 4px;
-    border: 1px solid #ccc;
-}
-
-.order-checkout {
-    width: 30%;
-    padding-left: 20px;
-}
-
-.checkout-summary {
-    padding: 20px;
-    background-color: #f9f9f9;
-    border: solid 0.5px #d2d2d2;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     text-align: center;
-    margin-right: 50px;
+    color: #324459;
 }
 
-.checkout-summary h3 {
+.section-title {
     font-size: 20px;
-    color: #333;
+    font-weight: bold;
+    margin: 15px 130px;
+    color: #324459;
+}
+
+.payment-options {
+    display: flex;
+    justify-content: center;
+    margin: 20px auto;
+    width: 70%;
+    height: 100px;
+    border: 0.5px solid #999;
+    border-radius: 15px;
+    position: relative;
+    align-items: center;
+}
+.payment-options::before{
+    content: "Payment Methods";
+    background-color: white;
+    position: absolute;
+    top: -14px;
+    padding: 2px 12px;
+    color: #555;
+    font-size: 14px;
+}
+
+.payment-options::after{
+    content: "";
+    width: 100%;
+    background-color: #999;
+    height: 1px;
+    position: absolute;
+    bottom: -20px;
+}
+
+.payment-option {
+    text-align: center;
+    cursor: pointer;
+}
+
+.payment-img {
+    width: 100px;
+    height: 70px;
+    margin: 0 30px;
+}
+
+.payment-label {
+    font-size: 10px;
+    color: #777;
+    margin: 0;
+}
+.input-field {
+    width: 70%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    font-size: 14px;
+    transition: all ease 0.3s;
+    margin-left: 130px;
+}
+.input-field:focus{
+    border-color: #ff9100; 
+    outline: none;
+}
+.input-field:focus::placeholder{
+    color: white;
+}
+
+.name-inputs{
+    display: flex;
+    justify-content: space-between;
+    width: 70%; 
+    margin: 0 auto;
+}
+.name-inputs .input-field{
+    margin-left: 0;
+    width: 49%;
+}
+.order-summary {
+    margin-top: 20px;
+    border-top: 1px solid #ddd;
+    padding-top: 20px;
+}
+.order-summary p{
+    margin-left: 130px;
     margin-bottom: 10px;
 }
-
-.checkout-summary p {
-    font-size: 16px;
-    color: #555;
+.checkout-actions {
+    margin-top: 20px;
+    text-align: center;
 }
 
 .checkout-btn {
-    background-color: #28a745;
-    border: none;
-    color: white;
     padding: 10px 20px;
-    margin-top: 15px;
-    cursor: pointer;
-    font-size: 16px;
+    background-color: #28a745;
+    color: white;
+    border: none;
     border-radius: 4px;
-    transition: background-color 0.3s ease;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
 }
 
 .checkout-btn:hover {
     background-color: #218838;
 }
-
-/* Responsive Design */
-@media (max-width: 768px) {
-    .pro-and-check {
-        flex-direction: column;
-    }
-
-    .cart-products {
-        width: 100%;
-        padding-right: 0;
-        border-right: none;
-        margin-bottom: 20px;
-    }
-
-    .order-checkout {
-        width: 100%;
-        padding-left: 0;
-    }
-
-    .my-product {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .product-img {
-        margin-bottom: 15px;
-    }
-
-    .checkout-summary p {
-        font-size: 14px;
-    }
-}
-
-.checkout-summary a{
-    background: green;
-    color: white;
-    list-style: none;
-    display: block;
-    margin: 0 auto;
-    height: 40px;
-    width: 230px;
-    text-decoration: none;
-    align-content: center;
-    border-radius: 10px;
-}
-
-
