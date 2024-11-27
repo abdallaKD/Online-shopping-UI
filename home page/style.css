@@ -83,7 +83,7 @@ body{
     align-items: center;
     width: 40px;
     height: 40px;
-    background-color: #febd69; 
+    background-color: #ffae46; 
     border-radius: 15px; 
     transition: transform 0.3s ease, background-color 0.3s ease;
     cursor: pointer;
@@ -323,6 +323,7 @@ nav ul li a:hover {
     height: 60vh;
     min-height: 60vh;
     width: 1050px;
+    background: url('../images/black_fri.avif') center;
     background-size: cover;
     overflow: hidden;
     border-radius: 5px;
@@ -407,6 +408,7 @@ nav ul li a:hover {
     border-color: rgba(0, 0, 0, 0);
     background-color: #232f3e;
     transition: all ease-in-out 0.3s;
+    cursor: pointer;
 }
 .category-products .category-products-header button:hover {
     scale: 1.1;
