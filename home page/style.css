@@ -3,12 +3,16 @@
     padding: 0;
     margin: 0;
 }
+
 html {
     scroll-behavior: smooth;
 }
-body{
+
+body {
     font-family: "Open Sans", sans-serif;
+    margin-top: 80px; /* Prevent content overlap with fixed header */
 }
+
 .header-container {
     display: flex;
     justify-content: space-between;
@@ -16,6 +20,10 @@ body{
     padding: 10px;
     background-color: #232f3e; 
     height: 80px;
+    position: fixed; /* Make it fixed */
+    top: 0;
+    width: 100%;
+    z-index: 1000; /* Ensure it stays on top */
 }
 
 .nav-container {
@@ -44,7 +52,6 @@ body{
     padding: 7px 40px 7px 10px; 
     border: 1px solid #ccc;
     border-radius: 5px;
-    position: relative;
     font-size: 16px;
 }
 
@@ -56,27 +63,12 @@ body{
     right: 10px;
     top: 10px;
     font-size: 16px;
-    z-index: 50;
     color: #aaa;
 }
 
 #search-bar:focus {
     border-color: #789abe; 
     outline: none;
-}
-
-#search-bar:focus::placeholder {
-    color: white;
-}
-
-.search-icon {
-    position: absolute; 
-    top: 50%;
-    right: 10px; 
-    transform: translateY(-50%);
-    font-size: 16px;
-    color: #888; 
-    cursor: pointer;
 }
 
 .microphone {
@@ -92,12 +84,14 @@ body{
     cursor: pointer;
     min-width: 40px;
 }
-.microphone button{
+
+.microphone button {
     background-color: transparent;
     border: none;
-    width: 100px;
-    height: 100px;
+    width: 100%;
+    height: 100%;
 }
+
 .microphone:hover {
     transform: scale(1.1); 
     background-color: #ba8239; 
@@ -111,14 +105,6 @@ body{
 
 nav {
     margin-left: auto;
-    position: relative;
-}
-
-nav .toggle-menu {
-    font-size: 24px;
-    margin-right: 10px;
-    cursor: pointer;
-    display: none; 
 }
 
 nav ul {
@@ -126,7 +112,16 @@ nav ul {
     list-style: none;
     margin: 0;
     padding: 0;
-    gap: 12px;  
+    gap: 12px;
+}
+
+nav ul li {
+    border-left: 1px solid #febd69;
+    padding-left: 10px;
+}
+
+nav ul li:first-child {
+    border: none;
 }
 
 nav ul li a {
@@ -134,23 +129,13 @@ nav ul li a {
     color: #fff; 
     padding: 5px 10px;
     transition: color 0.3s, background-color 0.5s;
-    
-}
-nav ul li{
-    border-left-style: solid;
-    border-color: #febd69;
-    border-width: 1px;
-    padding-left: 10px;
-}
-
-nav ul li:first-child{
-    border-width: 0px;
 }
 
 nav ul li a:hover {
     border-radius: 10px;
     color: #febd69;
 }
+
 .chatbot-container {
     position: fixed;
     bottom: 20px;
@@ -273,10 +258,9 @@ nav ul li a:hover {
     padding: 0px 100px;
     position: relative;
     display: flex;
-    height: 100vh;
+    height: 100%;
 }
 .sidebar {
-    position: sticky;
     top: 0;
     width: 250px;
     background-color: #232f3e;
@@ -571,4 +555,216 @@ nav ul li a:hover {
 
 .sidebar ul li a.cart-btn-holder:hover i.cart-btn{
     color: #white;
+}
+
+
+/* footer */
+
+footer {
+    background-color: #232f3e;
+    display: grid;
+    /* margin-top: -15px; */
+    padding: 15px;
+}
+
+.footer-upper {
+    display: flex;
+    width: 75%;
+    margin: auto;
+    margin-top: 70px;
+    height: 50vh;
+}
+
+.footer-upper>* {
+    flex: 1;
+    margin-right: 10px;
+    max-width: 100%;
+}
+
+.about-us-footer {
+    padding-left: 25px;
+    padding-right: 25px;
+    width: 25%;
+}
+
+.about-us-footer>div>h4,
+.recent-posts-footer>div>h4 {
+    padding-bottom: 8px;
+    font-weight: bold;
+    font-size: .75rem;
+    color: #f8f8f8;
+    letter-spacing: 3px;
+}
+
+
+.about-us-footer>div>p {
+    font-size: .875rem;
+    font-weight: 400;
+    line-height: 1.8;
+    color: #788487;
+    text-align: left;
+}
+
+.social-media-icons {
+    display: flex;
+    justify-content: space-between;
+    width: 50%;
+}
+
+.social-media-icons>span {
+    color: #cecece;
+    font-size: 13px;
+    cursor: pointer;
+    transition:
+        color .15s ease-in-out,
+        background-color .15s ease-in-out,
+        border-color .15s ease-in-out,
+        box-shadow .15s ease-in-out;
+}
+
+.social-media-icons>span:hover {
+    color: white;
+}
+
+.recent-posts-footer>div>p {
+    font-size: .875rem;
+    font-weight: 400;
+    line-height: 1.8;
+    color: #cecece;
+    text-align: left;
+}
+
+.recent-posts-footer>div {
+    border-bottom: 1px solid #78848732;
+}
+
+.recent-posts-footer :first-child {
+    border-bottom: none;
+}
+
+.recent-posts-footer :last-child {
+    border-bottom: none;
+}
+
+.recent-posts-footer>div>div>.date {
+    font-size: .8rem;
+    font-weight: 400;
+    line-height: 1.8;
+    color: #a3a6a8;
+    text-align: left;
+}
+
+.recent-posts-footer>div>div {
+    margin-top: -15px;
+}
+
+.twitter-feed-footer>h4,
+.portfolio-footer>h4 {
+    padding-bottom: 8px;
+    font-weight: bold;
+    font-size: .75rem;
+    color: #f8f8f8;
+    letter-spacing: 3px;
+}
+
+.portfolio-list {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.portfolio-item {
+    position: relative;
+    overflow: hidden;
+    margin: 5px;
+    cursor: pointer;
+}
+
+.image-cover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 92%;
+    background-color: rgb(37, 36, 36, 0.9);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.portfolio-item:hover .image-cover {
+    opacity: 0.6;
+}
+
+.portfolio-image {
+    position: relative;
+    overflow: hidden;
+    margin: 5px;
+    cursor: pointer;
+    flex: 1 0 calc(33.33% - 10px);
+}
+
+
+.portfolio-image:hover .image-cover {
+    opacity: 0.6;
+}
+
+.portfolio-image img {
+    width: 100%;
+    height: auto;
+}
+
+
+.footer-lower {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 9vh;
+    border-top: thin groove;
+    border-color: rgba(51, 51, 51, 0.6)
+}
+
+.footer-lower>p {
+    font-size: .8rem;
+    font-weight: 400;
+    line-height: 1.8;
+    color: #a3a6a8;
+    text-align: left;
+}
+
+.footer-lower>p>.twotheme {
+    font-size: .8rem;
+    font-weight: 400;
+    line-height: 1.8;
+    color: #cecece;
+    text-align: left;
+    transition:
+        color .15s ease-in-out,
+        background-color .15s ease-in-out,
+        border-color .15s ease-in-out,
+        box-shadow .15s ease-in-out;
+}
+
+.footer-lower>p>.twotheme:hover {
+    color: white;
+}
+
+.icon-up {
+    transition: transform 0.3s ease-in-out;
+}
+
+.icon-box:hover .icon-up {
+    transform: translateY(-10px);
+}
+
+.recent-posts-footer>div>p {
+    transition:
+        color .15s ease-in-out,
+        background-color .15s ease-in-out,
+        border-color .15s ease-in-out,
+        box-shadow .15s ease-in-out;
+
+    cursor: pointer;
+}
+
+.recent-posts-footer>div>p:hover {
+    color: white;
 }
