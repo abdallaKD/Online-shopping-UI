@@ -314,7 +314,7 @@ nav ul li a:hover {
     transition: all 0.3s;
 }
 
-.sidebar ul li a:hover {
+.sidebar ul li a:hover{
     color: #febd69;
 }
 .content-container {
@@ -531,7 +531,7 @@ nav ul li a:hover {
 
 .add-to-cart button:hover i{
     scale: 1.1;
-    color: #ff6200;
+    color: #febd69;
 }
 
 .add-to-cart button i{
@@ -550,8 +550,25 @@ nav ul li a:hover {
 
 .add-to-cart div i {
     cursor: pointer;
-    color: #ff6200;
+    color: #febd69;
 }
 
-.add-to-cart div i:click {
+.cart-btn {
+    position: absolute;
+    z-index: 500;
+    top: -6px;
+    left: -5px;
+    background-color: #febd69;
+    color: white;
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sidebar ul li a.cart-btn-holder:hover i.cart-btn{
+    color: #white;
 }

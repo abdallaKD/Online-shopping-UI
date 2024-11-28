@@ -32,10 +32,12 @@ document.getElementById('chatInput').addEventListener('keydown', function (event
 // Cart shopping sound
 const buttons = document.querySelectorAll('.soundButton');
 const audio = document.getElementById('buttonSound');
+const cartNumber = document.querySelector('body > header > div.header-container > div > nav > ul > li:nth-child(5) > a > i')
 buttons.forEach(button => {
     button.addEventListener('click', () => {
         audio.currentTime = 0; 
         audio.play(); 
+        cartNumber.textContent = (Number(cartNumber.textContent) + 1)
     });
 });
 
