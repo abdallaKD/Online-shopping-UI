@@ -505,7 +505,7 @@ nav ul li a:hover {
 }
 
 .checkout-summary a{
-    background: green;
+    background: #28a745;
     color: white;
     list-style: none;
     display: block;
