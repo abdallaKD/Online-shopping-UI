@@ -86,3 +86,8 @@ function calculateTotal() {
 calculateTotal();
 
 
+const card = document.querySelector('.card');
+
+card.addEventListener('click', () => {
+    window.open('../single-product/index.html', '_self');
+});

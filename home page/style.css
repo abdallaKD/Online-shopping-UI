@@ -554,7 +554,7 @@ nav ul li a:hover {
 }
 
 .sidebar ul li a.cart-btn-holder:hover i.cart-btn{
-    color: #white;
+    color: white;
 }
 
 
@@ -768,3 +768,8 @@ footer {
 .recent-posts-footer>div>p:hover {
     color: white;
 }
+
+.card-link{
+    text-decoration: none;
+}
+
