@@ -41,6 +41,10 @@ buttons.forEach(button => {
     });
 });
 
+document.querySelector('.remove-btn').addEventListener('click', () => {
+    cartNumber.textContent = (Number(cartNumber.textContent) + 1)
+})
+
 // Microphone sound
 const micButton = document.getElementById('microphoneButton');
 const micAudio = document.getElementById('microphoneSound');
