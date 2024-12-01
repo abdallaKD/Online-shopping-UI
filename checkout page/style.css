@@ -424,3 +424,125 @@ nav ul li a:hover {
     background-color: red; /* Default color */
     transition: opacity 0.3s ease-in-out; /* Smooth fade-in and fade-out */
 }
+
+
+@media (max-width: 768px) {
+    /* Header adjustments */
+    .header-container {
+        display: flex;
+        flex-direction: column;
+        height: auto;
+        padding: 15px;
+        align-items: center;
+    }
+
+    .nav-container {
+        gap: 20px;
+        align-items: center;
+        justify-content: space-around;
+        align-self: flex-end;
+    }
+
+    .nav-container img {
+        height: 50px;
+        width: 60px;
+        position: absolute;
+        top: 20px;
+    }
+
+    .search-wrapper {
+        display: flex; 
+        align-items: center; 
+        justify-content: center; 
+        width: 100%; 
+        margin: 10px auto;
+        gap: 10px; 
+    }
+
+    .search-bar {
+        flex-grow: 1; 
+        max-width: 300px; 
+    }
+
+    .mic-button {
+        width: 40px; 
+        height: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        background-color: #ddd; 
+    }
+
+    
+    nav {
+        display: none; /* Hides the navigation bar */
+    }
+
+    /* Chatbot */
+    .chatbot-icon{
+        width: 50px;
+        height: 50px;
+    }   
+    .chatbot-container{
+        width: 40px;
+        height: 40px;
+    }   
+    .chatbot-window {
+        width: 90%;
+        bottom: 100px;
+        right: 5%;
+    }
+
+    .chatbot-body {
+        height: 150px;
+    }
+
+    /* Checkout Section */
+    .checkout-main {
+        width: 90%;
+        padding: 10px;
+    }
+
+    .section-title {
+        margin: 10px 0;
+        font-size: 18px;
+        text-align: center;
+    }
+
+    .input-field {
+        width: 90%;
+        margin: 10px auto;
+    }
+
+    .name-inputs {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .name-inputs .input-field {
+        width: 100%;
+    }
+
+    .payment-options {
+        flex-direction: column;
+        gap: 10px;
+        height: auto;
+    }
+
+    .payment-img {
+        width: 80px;
+        height: 50px;
+    }
+
+    /* Footer */
+    .checkout-actions {
+        text-align: center;
+    }
+
+    .checkout-btn {
+        width: 80%;
+        margin: 0 auto;
+    }
+
+}
