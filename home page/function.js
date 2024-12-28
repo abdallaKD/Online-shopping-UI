@@ -45,15 +45,6 @@ document.querySelector('.remove-btn').addEventListener('click', () => {
     cartNumber.textContent = (Number(cartNumber.textContent) + 1)
 })
 
-// Microphone sound
-const micButton = document.getElementById('microphoneButton');
-const micAudio = document.getElementById('microphoneSound');
-micButton.addEventListener('click', () => {
-    micAudio.currentTime = 0; 
-    micAudio.play(); 
-});
-
-
 
 function removeProduct(button) {
     const productElement = button.closest('.my-product');

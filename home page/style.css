@@ -506,11 +506,16 @@ nav ul li a:hover {
     transition: all 0.3s;
 }
 
+.card-item-wrapper:hover {
+    scale: 1.1;
+}
+
 .add-to-cart {
     display: flex;
     position: relative;
     justify-content: space-between;
     padding: 0 10px;
+    padding-bottom: 10px;
 }
 
 .add-to-cart button {

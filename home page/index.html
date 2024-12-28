@@ -17,7 +17,6 @@
     <script src="../carousel/carousel.js"></script>
 </head>
 <body>
-    
     <header>
         <div class="header-container">
             <div class="nav-container">
@@ -26,8 +25,9 @@
                     <input type="text" id="search-bar" class="searching" placeholder="What are you looking for?">
                 </div>
                 <div class="microphone">
-                    <button id="microphoneButton"><i class="fa-solid fa-microphone"></i></button>
                     <audio id="microphoneSound" src="../sounds/mixkit-select-click-1109.wav"></audio>
+                    <script src="audio.js"></script>
+                    <button id="microphoneButton" onclick="playAudio()"><i class="fa-solid fa-microphone"></i></button>
                 </div>
                 <nav>
                     <ul class="nav-list">
@@ -139,82 +139,94 @@
                             </div>
                             </div>
 
-                            <a href="../single-product/index.html" class="card-item-link">
-                                <div class="card-item">
-                                    <div class="product-image">
-                                        <img src="../images\products\electronics\2.avif" alt="">
-                                    </div>
-                                    <div class="product-details">
-                                        <p class="product-name">Anker - Charging Cable</p>
-                                        <p class="product-price"><span>EGP</span><b> 129 </b><span style="text-decoration: line-through;">349</span></p>
-                                    </div>
-                                    <div class="add-to-cart">
-                                        <div>
-                                            <p>4.8</p>
-                                            <i class="fa-regular fa-star"></i>
+                            <div class="card-item-wrapper">
+                                <a href="../single-product/index.html" class="card-item-link">
+                                    <div class="card-item">
+                                        <div class="product-image">
+                                            <img src="../images\products\electronics\2.avif" alt="">
                                         </div>
-                                        <button class="soundButton"><i class="fa-solid fa-cart-shopping"></i></button>
-                                    </div>
-                                </div>
-                            </a>
-
-                            <a href="../single-product/index.html" class="card-item-link">
-                                <div class="card-item">
-                                    <div class="product-image">
-                                        <img src="../images\products\electronics\1.avif" alt="">
-                                    </div>
-                                    <div class="product-details">
-                                        <p class="product-name">Anker - Charging Cable</p>
-                                        <p class="product-price"><span>EGP</span><b> 129 </b><span style="text-decoration: line-through;">349</span></p>
-                                    </div>
-                                    <div class="add-to-cart">
-                                        <div>
-                                            <p>4.8</p>
-                                            <i class="fa-regular fa-star"></i>
+                                        <div class="product-details">
+                                            <p class="product-name">Anker - Charging Cable</p>
+                                            <p class="product-price"><span>EGP</span><b> 129 </b><span style="text-decoration: line-through;">349</span></p>
                                         </div>
-                                        <button class="soundButton"><i class="fa-solid fa-cart-shopping"></i></button>
                                     </div>
+                                </a>
+                                <div class="add-to-cart">
+                                    <div>
+                                        <p>4.8</p>
+                                        <i class="fa-regular fa-star"></i>
+                                    </div>
+                                    <button class="soundButton"><i class="fa-solid fa-cart-shopping"></i></button>
+                                    <audio id="buttonSound" src="../sounds/button-pressed-38129.mp3"></audio>
                                 </div>
-                            </a>
-
-                            <a href="../single-product/index.html" class="card-item-link">
-                                <div class="card-item">
-                                    <div class="product-image">
-                                        <img src="../images\products\electronics\3.avif" alt="">
-                                    </div>
-                                    <div class="product-details">
-                                        <p class="product-name">Anker - Charging Cable</p>
-                                        <p class="product-price"><span>EGP</span><b> 129 </b><span style="text-decoration: line-through;">349</span></p>
-                                    </div>
-                                    <div class="add-to-cart">
-                                        <div>
-                                            <p>4.8</p>
-                                            <i class="fa-regular fa-star"></i>
+                            </div>
+                            
+                            <div class="card-item-wrapper">
+                                <a href="../single-product/index.html" class="card-item-link">
+                                    <div class="card-item">
+                                        <div class="product-image">
+                                            <img src="../images\products\electronics\1.avif" alt="">
                                         </div>
-                                        <button class="soundButton"><i class="fa-solid fa-cart-shopping"></i></button>
-                                    </div>
-                                </div>
-                            </a>
-
-                            <a href="../single-product/index.html" class="card-item-link">
-                                <div class="card-item">
-                                    <div class="product-image">
-                                        <img src="../images\products\electronics\4.avif" alt="">
-                                    </div>
-                                    <div class="product-details">
-                                        <p class="product-name">Anker - Charging Cable</p>
-                                        <p class="product-price"><span>EGP</span><b> 129 </b><span style="text-decoration: line-through;">349</span></p>
-                                    </div>
-                                    <div class="add-to-cart">
-                                        <div>
-                                            <p>4.8</p>
-                                            <i class="fa-regular fa-star"></i>
+                                        <div class="product-details">
+                                            <p class="product-name">Anker - Charging Cable</p>
+                                            <p class="product-price"><span>EGP</span><b> 129 </b><span style="text-decoration: line-through;">349</span></p>
                                         </div>
-                                        <button class="soundButton"><i class="fa-solid fa-cart-shopping"></i></button>
                                     </div>
+                                </a>
+                                <div class="add-to-cart">
+                                    <div>
+                                        <p>4.8</p>
+                                        <i class="fa-regular fa-star"></i>
+                                    </div>
+                                    <button class="soundButton"><i class="fa-solid fa-cart-shopping"></i></button>
+                                    <audio id="buttonSound" src="../sounds/button-pressed-38129.mp3"></audio>
                                 </div>
-                            </a>
-
+                            </div>
+                            
+                            <div class="card-item-wrapper">
+                                <a href="../single-product/index.html" class="card-item-link">
+                                    <div class="card-item">
+                                        <div class="product-image">
+                                            <img src="../images\products\electronics\3.avif" alt="">
+                                        </div>
+                                        <div class="product-details">
+                                            <p class="product-name">Anker - Charging Cable</p>
+                                            <p class="product-price"><span>EGP</span><b> 129 </b><span style="text-decoration: line-through;">349</span></p>
+                                        </div>
+                                    </div>
+                                </a>
+                                <div class="add-to-cart">
+                                    <div>
+                                        <p>4.8</p>
+                                        <i class="fa-regular fa-star"></i>
+                                    </div>
+                                    <button class="soundButton"><i class="fa-solid fa-cart-shopping"></i></button>
+                                    <audio id="buttonSound" src="../sounds/button-pressed-38129.mp3"></audio>
+                                </div>
+                            </div>
+                            
+                            <div class="card-item-wrapper">
+                                <a href="../single-product/index.html" class="card-item-link">
+                                    <div class="card-item">
+                                        <div class="product-image">
+                                            <img src="../images\products\electronics\4.avif" alt="">
+                                        </div>
+                                        <div class="product-details">
+                                            <p class="product-name">Anker - Charging Cable</p>
+                                            <p class="product-price"><span>EGP</span><b> 129 </b><span style="text-decoration: line-through;">349</span></p>
+                                        </div>
+                                    </div>
+                                </a>
+                                <div class="add-to-cart">
+                                    <div>
+                                        <p>4.8</p>
+                                        <i class="fa-regular fa-star"></i>
+                                    </div>
+                                    <button class="soundButton"><i class="fa-solid fa-cart-shopping"></i></button>
+                                    <audio id="buttonSound" src="../sounds/button-pressed-38129.mp3"></audio>
+                                </div>
+                            </div>
+                            
                         </div>
 
                         
@@ -228,92 +240,117 @@
                             <button>shop now</button>
                         </div>
                         <div class="card-items">
-                            <div class="card-item">
-                                <div class="product-image">
-                                    <img src="../images\products\fashion\1.avif" alt="">
-                                </div>
-                                <div class="product-details">
-                                    <p class="product-name">Anker - Charging Cable</p>
-                                    <p class="product-price"><span>EGP</span><b> 129 </b><span style="text-decoration: line-through;">349</span></p>
-                                </div>
+                            <div class="card-item-wrapper">
+                                <a href="../single-product/index.html" class="card-item-link">
+                                    <div class="card-item">
+                                        <div class="product-image">
+                                            <img src="../images\products\fashion\1.avif" alt="">
+                                        </div>
+                                        <div class="product-details">
+                                            <p class="product-name">Anker - Charging Cable</p>
+                                            <p class="product-price"><span>EGP</span><b> 129 </b><span style="text-decoration: line-through;">349</span></p>
+                                        </div>
+                                    </div>
+                                </a>
                                 <div class="add-to-cart">
                                     <div>
                                         <p>4.8</p>
                                         <i class="fa-regular fa-star"></i>
                                     </div>
                                     <button class="soundButton"><i class="fa-solid fa-cart-shopping"></i></button>
+                                    <audio id="buttonSound" src="../sounds/button-pressed-38129.mp3"></audio>
                                 </div>
                             </div>
-
-                            <div class="card-item">
-                                <div class="product-image">
-                                    <img src="../images\products\fashion\2.avif" alt="">
-                                </div>
-                                <div class="product-details">
-                                    <p class="product-name">Anker - Charging Cable</p>
-                                    <p class="product-price"><span>EGP</span><b> 129 </b><span style="text-decoration: line-through;">349</span></p>
-                                </div>
+                        
+                            <div class="card-item-wrapper">
+                                <a href="../single-product/index.html" class="card-item-link">
+                                    <div class="card-item">
+                                        <div class="product-image">
+                                            <img src="../images\products\fashion\2.avif" alt="">
+                                        </div>
+                                        <div class="product-details">
+                                            <p class="product-name">Anker - Charging Cable</p>
+                                            <p class="product-price"><span>EGP</span><b> 129 </b><span style="text-decoration: line-through;">349</span></p>
+                                        </div>
+                                    </div>
+                                </a>
                                 <div class="add-to-cart">
                                     <div>
                                         <p>4.8</p>
                                         <i class="fa-regular fa-star"></i>
                                     </div>
                                     <button class="soundButton"><i class="fa-solid fa-cart-shopping"></i></button>
+                                    <audio id="buttonSound" src="../sounds/button-pressed-38129.mp3"></audio>
                                 </div>
                             </div>
-
-                            <div class="card-item">
-                                <div class="product-image">
-                                    <img src="../images\products\fashion\3.avif" alt="">
-                                </div>
-                                <div class="product-details">
-                                    <p class="product-name">Anker - Charging Cable</p>
-                                    <p class="product-price"><span>EGP</span><b> 129 </b><span style="text-decoration: line-through;">349</span></p>
-                                </div>
+                        
+                            <div class="card-item-wrapper">
+                                <a href="../single-product/index.html" class="card-item-link">
+                                    <div class="card-item">
+                                        <div class="product-image">
+                                            <img src="../images\products\fashion\3.avif" alt="">
+                                        </div>
+                                        <div class="product-details">
+                                            <p class="product-name">Anker - Charging Cable</p>
+                                            <p class="product-price"><span>EGP</span><b> 129 </b><span style="text-decoration: line-through;">349</span></p>
+                                        </div>
+                                    </div>
+                                </a>
                                 <div class="add-to-cart">
                                     <div>
                                         <p>4.8</p>
                                         <i class="fa-regular fa-star"></i>
                                     </div>
                                     <button class="soundButton"><i class="fa-solid fa-cart-shopping"></i></button>
+                                    <audio id="buttonSound" src="../sounds/button-pressed-38129.mp3"></audio>
                                 </div>
                             </div>
-
-                            <div class="card-item">
-                                <div class="product-image">
-                                    <img src="../images\products\fashion\4.avif" alt="">
-                                </div>
-                                <div class="product-details">
-                                    <p class="product-name">Anker - Charging Cable</p>
-                                    <p class="product-price"><span>EGP</span><b> 129 </b><span style="text-decoration: line-through;">349</span></p>
-                                </div>
+                        
+                            <div class="card-item-wrapper">
+                                <a href="../single-product/index.html" class="card-item-link">
+                                    <div class="card-item">
+                                        <div class="product-image">
+                                            <img src="../images\products\fashion\4.avif" alt="">
+                                        </div>
+                                        <div class="product-details">
+                                            <p class="product-name">Anker - Charging Cable</p>
+                                            <p class="product-price"><span>EGP</span><b> 129 </b><span style="text-decoration: line-through;">349</span></p>
+                                        </div>
+                                    </div>
+                                </a>
                                 <div class="add-to-cart">
                                     <div>
                                         <p>4.8</p>
                                         <i class="fa-regular fa-star"></i>
                                     </div>
                                     <button class="soundButton"><i class="fa-solid fa-cart-shopping"></i></button>
+                                    <audio id="buttonSound" src="../sounds/button-pressed-38129.mp3"></audio>
                                 </div>
                             </div>
-
-                            <div class="card-item">
-                                <div class="product-image">
-                                    <img src="../images\products\fashion\5.avif" alt="">
-                                </div>
-                                <div class="product-details">
-                                    <p class="product-name">Anker - Charging Cable</p>
-                                    <p class="product-price"><span>EGP</span><b> 129 </b><span style="text-decoration: line-through;">349</span></p>
-                                </div>
+                        
+                            <div class="card-item-wrapper">
+                                <a href="../single-product/index.html" class="card-item-link">
+                                    <div class="card-item">
+                                        <div class="product-image">
+                                            <img src="../images\products\fashion\5.avif" alt="">
+                                        </div>
+                                        <div class="product-details">
+                                            <p class="product-name">Anker - Charging Cable</p>
+                                            <p class="product-price"><span>EGP</span><b> 129 </b><span style="text-decoration: line-through;">349</span></p>
+                                        </div>
+                                    </div>
+                                </a>
                                 <div class="add-to-cart">
                                     <div>
                                         <p>4.8</p>
                                         <i class="fa-regular fa-star"></i>
                                     </div>
                                     <button class="soundButton"><i class="fa-solid fa-cart-shopping"></i></button>
+                                    <audio id="buttonSound" src="../sounds/button-pressed-38129.mp3"></audio>
                                 </div>
                             </div>
-
                         </div>
+                        
 
                         
                     </div>
@@ -326,92 +363,117 @@
                             <button>shop now</button>
                         </div>
                         <div class="card-items">
-                            <div class="card-item">
-                                <div class="product-image">
-                                    <img src="../images\products\Home\1.avif" alt="">
-                                </div>
-                                <div class="product-details">
-                                    <p class="product-name">Anker - Charging Cable</p>
-                                    <p class="product-price"><span>EGP</span><b> 129 </b><span style="text-decoration: line-through;">349</span></p>
-                                </div>
+                            <div class="card-item-wrapper">
+                                <a href="../single-product/index.html" class="card-item-link">
+                                    <div class="card-item">
+                                        <div class="product-image">
+                                            <img src="../images\products\Home\1.avif" alt="">
+                                        </div>
+                                        <div class="product-details">
+                                            <p class="product-name">Anker - Charging Cable</p>
+                                            <p class="product-price"><span>EGP</span><b> 129 </b><span style="text-decoration: line-through;">349</span></p>
+                                        </div>
+                                    </div>
+                                </a>
                                 <div class="add-to-cart">
                                     <div>
                                         <p>4.8</p>
                                         <i class="fa-regular fa-star"></i>
                                     </div>
                                     <button class="soundButton"><i class="fa-solid fa-cart-shopping"></i></button>
+                                    <audio id="buttonSound" src="../sounds/button-pressed-38129.mp3"></audio>
                                 </div>
                             </div>
-
-                            <div class="card-item">
-                                <div class="product-image">
-                                    <img src="../images\products\Home\2.avif" alt="">
-                                </div>
-                                <div class="product-details">
-                                    <p class="product-name">Anker - Charging Cable</p>
-                                    <p class="product-price"><span>EGP</span><b> 129 </b><span style="text-decoration: line-through;">349</span></p>
-                                </div>
+                        
+                            <div class="card-item-wrapper">
+                                <a href="../single-product/index.html" class="card-item-link">
+                                    <div class="card-item">
+                                        <div class="product-image">
+                                            <img src="../images\products\Home\2.avif" alt="">
+                                        </div>
+                                        <div class="product-details">
+                                            <p class="product-name">Anker - Charging Cable</p>
+                                            <p class="product-price"><span>EGP</span><b> 129 </b><span style="text-decoration: line-through;">349</span></p>
+                                        </div>
+                                    </div>
+                                </a>
                                 <div class="add-to-cart">
                                     <div>
                                         <p>4.8</p>
                                         <i class="fa-regular fa-star"></i>
                                     </div>
                                     <button class="soundButton"><i class="fa-solid fa-cart-shopping"></i></button>
+                                    <audio id="buttonSound" src="../sounds/button-pressed-38129.mp3"></audio>
                                 </div>
                             </div>
-
-                            <div class="card-item">
-                                <div class="product-image">
-                                    <img src="../images\products\Home\3.avif" alt="">
-                                </div>
-                                <div class="product-details">
-                                    <p class="product-name">Anker - Charging Cable</p>
-                                    <p class="product-price"><span>EGP</span><b> 129 </b><span style="text-decoration: line-through;">349</span></p>
-                                </div>
+                        
+                            <div class="card-item-wrapper">
+                                <a href="../single-product/index.html" class="card-item-link">
+                                    <div class="card-item">
+                                        <div class="product-image">
+                                            <img src="../images\products\Home\3.avif" alt="">
+                                        </div>
+                                        <div class="product-details">
+                                            <p class="product-name">Anker - Charging Cable</p>
+                                            <p class="product-price"><span>EGP</span><b> 129 </b><span style="text-decoration: line-through;">349</span></p>
+                                        </div>
+                                    </div>
+                                </a>
                                 <div class="add-to-cart">
                                     <div>
                                         <p>4.8</p>
                                         <i class="fa-regular fa-star"></i>
                                     </div>
                                     <button class="soundButton"><i class="fa-solid fa-cart-shopping"></i></button>
+                                    <audio id="buttonSound" src="../sounds/button-pressed-38129.mp3"></audio>
                                 </div>
                             </div>
-
-                            <div class="card-item">
-                                <div class="product-image">
-                                    <img src="../images\products\Home\4.avif" alt="">
-                                </div>
-                                <div class="product-details">
-                                    <p class="product-name">Anker - Charging Cable</p>
-                                    <p class="product-price"><span>EGP</span><b> 129 </b><span style="text-decoration: line-through;">349</span></p>
-                                </div>
+                        
+                            <div class="card-item-wrapper">
+                                <a href="../single-product/index.html" class="card-item-link">
+                                    <div class="card-item">
+                                        <div class="product-image">
+                                            <img src="../images\products\Home\4.avif" alt="">
+                                        </div>
+                                        <div class="product-details">
+                                            <p class="product-name">Anker - Charging Cable</p>
+                                            <p class="product-price"><span>EGP</span><b> 129 </b><span style="text-decoration: line-through;">349</span></p>
+                                        </div>
+                                    </div>
+                                </a>
                                 <div class="add-to-cart">
                                     <div>
                                         <p>4.8</p>
                                         <i class="fa-regular fa-star"></i>
                                     </div>
                                     <button class="soundButton"><i class="fa-solid fa-cart-shopping"></i></button>
+                                    <audio id="buttonSound" src="../sounds/button-pressed-38129.mp3"></audio>
                                 </div>
                             </div>
-
-                            <div class="card-item">
-                                <div class="product-image">
-                                    <img src="../images\products\Home\5.avif" alt="">
-                                </div>
-                                <div class="product-details">
-                                    <p class="product-name">Anker - Charging Cable</p>
-                                    <p class="product-price"><span>EGP</span><b> 129 </b><span style="text-decoration: line-through;">349</span></p>
-                                </div>
+                        
+                            <div class="card-item-wrapper">
+                                <a href="../single-product/index.html" class="card-item-link">
+                                    <div class="card-item">
+                                        <div class="product-image">
+                                            <img src="../images\products\Home\5.avif" alt="">
+                                        </div>
+                                        <div class="product-details">
+                                            <p class="product-name">Anker - Charging Cable</p>
+                                            <p class="product-price"><span>EGP</span><b> 129 </b><span style="text-decoration: line-through;">349</span></p>
+                                        </div>
+                                    </div>
+                                </a>
                                 <div class="add-to-cart">
                                     <div>
                                         <p>4.8</p>
                                         <i class="fa-regular fa-star"></i>
                                     </div>
                                     <button class="soundButton"><i class="fa-solid fa-cart-shopping"></i></button>
+                                    <audio id="buttonSound" src="../sounds/button-pressed-38129.mp3"></audio>
                                 </div>
                             </div>
-
                         </div>
+                        
 
                         
                     </div>
@@ -424,92 +486,117 @@
                             <button>shop now</button>
                         </div>
                         <div class="card-items">
-                            <div class="card-item">
-                                <div class="product-image">
-                                    <img src="../images\products\toys\1.avif" alt="">
-                                </div>
-                                <div class="product-details">
-                                    <p class="product-name">Anker - Charging Cable</p>
-                                    <p class="product-price"><span>EGP</span><b> 129 </b><span style="text-decoration: line-through;">349</span></p>
-                                </div>
+                            <div class="card-item-wrapper">
+                                <a href="../single-product/index.html" class="card-item-link">
+                                    <div class="card-item">
+                                        <div class="product-image">
+                                            <img src="../images\products\toys\1.avif" alt="">
+                                        </div>
+                                        <div class="product-details">
+                                            <p class="product-name">Anker - Charging Cable</p>
+                                            <p class="product-price"><span>EGP</span><b> 129 </b><span style="text-decoration: line-through;">349</span></p>
+                                        </div>
+                                    </div>
+                                </a>
                                 <div class="add-to-cart">
                                     <div>
                                         <p>4.8</p>
                                         <i class="fa-regular fa-star"></i>
                                     </div>
                                     <button class="soundButton"><i class="fa-solid fa-cart-shopping"></i></button>
+                                    <audio id="buttonSound" src="../sounds/button-pressed-38129.mp3"></audio>
                                 </div>
                             </div>
-
-                            <div class="card-item">
-                                <div class="product-image">
-                                    <img src="../images\products\toys\2.avif" alt="">
-                                </div>
-                                <div class="product-details">
-                                    <p class="product-name">Anker - Charging Cable</p>
-                                    <p class="product-price"><span>EGP</span><b> 129 </b><span style="text-decoration: line-through;">349</span></p>
-                                </div>
+                        
+                            <div class="card-item-wrapper">
+                                <a href="../single-product/index.html" class="card-item-link">
+                                    <div class="card-item">
+                                        <div class="product-image">
+                                            <img src="../images\products\toys\2.avif" alt="">
+                                        </div>
+                                        <div class="product-details">
+                                            <p class="product-name">Anker - Charging Cable</p>
+                                            <p class="product-price"><span>EGP</span><b> 129 </b><span style="text-decoration: line-through;">349</span></p>
+                                        </div>
+                                    </div>
+                                </a>
                                 <div class="add-to-cart">
                                     <div>
                                         <p>4.8</p>
                                         <i class="fa-regular fa-star"></i>
                                     </div>
                                     <button class="soundButton"><i class="fa-solid fa-cart-shopping"></i></button>
+                                    <audio id="buttonSound" src="../sounds/button-pressed-38129.mp3"></audio>
                                 </div>
                             </div>
-
-                            <div class="card-item">
-                                <div class="product-image">
-                                    <img src="../images\products\toys\3.avif" alt="">
-                                </div>
-                                <div class="product-details">
-                                    <p class="product-name">Anker - Charging Cable</p>
-                                    <p class="product-price"><span>EGP</span><b> 129 </b><span style="text-decoration: line-through;">349</span></p>
-                                </div>
+                        
+                            <div class="card-item-wrapper">
+                                <a href="../single-product/index.html" class="card-item-link">
+                                    <div class="card-item">
+                                        <div class="product-image">
+                                            <img src="../images\products\toys\3.avif" alt="">
+                                        </div>
+                                        <div class="product-details">
+                                            <p class="product-name">Anker - Charging Cable</p>
+                                            <p class="product-price"><span>EGP</span><b> 129 </b><span style="text-decoration: line-through;">349</span></p>
+                                        </div>
+                                    </div>
+                                </a>
                                 <div class="add-to-cart">
                                     <div>
                                         <p>4.8</p>
                                         <i class="fa-regular fa-star"></i>
                                     </div>
                                     <button class="soundButton"><i class="fa-solid fa-cart-shopping"></i></button>
+                                    <audio id="buttonSound" src="../sounds/button-pressed-38129.mp3"></audio>
                                 </div>
                             </div>
-
-                            <div class="card-item">
-                                <div class="product-image">
-                                    <img src="../images\products\toys\4.avif" alt="">
-                                </div>
-                                <div class="product-details">
-                                    <p class="product-name">Anker - Charging Cable</p>
-                                    <p class="product-price"><span>EGP</span><b> 129 </b><span style="text-decoration: line-through;">349</span></p>
-                                </div>
+                        
+                            <div class="card-item-wrapper">
+                                <a href="../single-product/index.html" class="card-item-link">
+                                    <div class="card-item">
+                                        <div class="product-image">
+                                            <img src="../images\products\toys\4.avif" alt="">
+                                        </div>
+                                        <div class="product-details">
+                                            <p class="product-name">Anker - Charging Cable</p>
+                                            <p class="product-price"><span>EGP</span><b> 129 </b><span style="text-decoration: line-through;">349</span></p>
+                                        </div>
+                                    </div>
+                                </a>
                                 <div class="add-to-cart">
                                     <div>
                                         <p>4.8</p>
                                         <i class="fa-regular fa-star"></i>
                                     </div>
                                     <button class="soundButton"><i class="fa-solid fa-cart-shopping"></i></button>
+                                    <audio id="buttonSound" src="../sounds/button-pressed-38129.mp3"></audio>
                                 </div>
                             </div>
-
-                            <div class="card-item">
-                                <div class="product-image">
-                                    <img src="../images\products\toys\5.avif" alt="">
-                                </div>
-                                <div class="product-details">
-                                    <p class="product-name">Anker - Charging Cable</p>
-                                    <p class="product-price"><span>EGP</span><b> 129 </b><span style="text-decoration: line-through;">349</span></p>
-                                </div>
+                        
+                            <div class="card-item-wrapper">
+                                <a href="../single-product/index.html" class="card-item-link">
+                                    <div class="card-item">
+                                        <div class="product-image">
+                                            <img src="../images\products\toys\5.avif" alt="">
+                                        </div>
+                                        <div class="product-details">
+                                            <p class="product-name">Anker - Charging Cable</p>
+                                            <p class="product-price"><span>EGP</span><b> 129 </b><span style="text-decoration: line-through;">349</span></p>
+                                        </div>
+                                    </div>
+                                </a>
                                 <div class="add-to-cart">
                                     <div>
                                         <p>4.8</p>
                                         <i class="fa-regular fa-star"></i>
                                     </div>
                                     <button class="soundButton"><i class="fa-solid fa-cart-shopping"></i></button>
+                                    <audio id="buttonSound" src="../sounds/button-pressed-38129.mp3"></audio>
                                 </div>
                             </div>
-
                         </div>
+                        
 
                         
                     </div>
@@ -522,92 +609,117 @@
                             <button>shop now</button>
                         </div>
                         <div class="card-items">
-                            <div class="card-item">
-                                <div class="product-image">
-                                    <img src="../images\products\books\1.avif" alt="">
-                                </div>
-                                <div class="product-details">
-                                    <p class="product-name">Anker - Charging Cable</p>
-                                    <p class="product-price"><span>EGP</span><b> 129 </b><span style="text-decoration: line-through;">349</span></p>
-                                </div>
+                            <div class="card-item-wrapper">
+                                <a href="../single-product/index.html" class="card-item-link">
+                                    <div class="card-item">
+                                        <div class="product-image">
+                                            <img src="../images\products\books\1.avif" alt="">
+                                        </div>
+                                        <div class="product-details">
+                                            <p class="product-name">Anker - Charging Cable</p>
+                                            <p class="product-price"><span>EGP</span><b> 129 </b><span style="text-decoration: line-through;">349</span></p>
+                                        </div>
+                                    </div>
+                                </a>
                                 <div class="add-to-cart">
                                     <div>
                                         <p>4.8</p>
                                         <i class="fa-regular fa-star"></i>
                                     </div>
                                     <button class="soundButton"><i class="fa-solid fa-cart-shopping"></i></button>
+                                    <audio id="buttonSound" src="../sounds/button-pressed-38129.mp3"></audio>
                                 </div>
                             </div>
-
-                            <div class="card-item">
-                                <div class="product-image">
-                                    <img src="../images\products\books\2.avif" alt="">
-                                </div>
-                                <div class="product-details">
-                                    <p class="product-name">Anker - Charging Cable</p>
-                                    <p class="product-price"><span>EGP</span><b> 129 </b><span style="text-decoration: line-through;">349</span></p>
-                                </div>
+                        
+                            <div class="card-item-wrapper">
+                                <a href="../single-product/index.html" class="card-item-link">
+                                    <div class="card-item">
+                                        <div class="product-image">
+                                            <img src="../images\products\books\2.avif" alt="">
+                                        </div>
+                                        <div class="product-details">
+                                            <p class="product-name">Anker - Charging Cable</p>
+                                            <p class="product-price"><span>EGP</span><b> 129 </b><span style="text-decoration: line-through;">349</span></p>
+                                        </div>
+                                    </div>
+                                </a>
                                 <div class="add-to-cart">
                                     <div>
                                         <p>4.8</p>
                                         <i class="fa-regular fa-star"></i>
                                     </div>
                                     <button class="soundButton"><i class="fa-solid fa-cart-shopping"></i></button>
+                                    <audio id="buttonSound" src="../sounds/button-pressed-38129.mp3"></audio>
                                 </div>
                             </div>
-
-                            <div class="card-item">
-                                <div class="product-image">
-                                    <img src="../images\products\books\3.avif" alt="">
-                                </div>
-                                <div class="product-details">
-                                    <p class="product-name">Anker - Charging Cable</p>
-                                    <p class="product-price"><span>EGP</span><b> 129 </b><span style="text-decoration: line-through;">349</span></p>
-                                </div>
+                        
+                            <div class="card-item-wrapper">
+                                <a href="../single-product/index.html" class="card-item-link">
+                                    <div class="card-item">
+                                        <div class="product-image">
+                                            <img src="../images\products\books\3.avif" alt="">
+                                        </div>
+                                        <div class="product-details">
+                                            <p class="product-name">Anker - Charging Cable</p>
+                                            <p class="product-price"><span>EGP</span><b> 129 </b><span style="text-decoration: line-through;">349</span></p>
+                                        </div>
+                                    </div>
+                                </a>
                                 <div class="add-to-cart">
                                     <div>
                                         <p>4.8</p>
                                         <i class="fa-regular fa-star"></i>
                                     </div>
                                     <button class="soundButton"><i class="fa-solid fa-cart-shopping"></i></button>
+                                    <audio id="buttonSound" src="../sounds/button-pressed-38129.mp3"></audio>
                                 </div>
                             </div>
-
-                            <div class="card-item">
-                                <div class="product-image">
-                                    <img src="../images\products\books\4.avif" alt="">
-                                </div>
-                                <div class="product-details">
-                                    <p class="product-name">Anker - Charging Cable</p>
-                                    <p class="product-price"><span>EGP</span><b> 129 </b><span style="text-decoration: line-through;">349</span></p>
-                                </div>
+                        
+                            <div class="card-item-wrapper">
+                                <a href="../single-product/index.html" class="card-item-link">
+                                    <div class="card-item">
+                                        <div class="product-image">
+                                            <img src="../images\products\books\4.avif" alt="">
+                                        </div>
+                                        <div class="product-details">
+                                            <p class="product-name">Anker - Charging Cable</p>
+                                            <p class="product-price"><span>EGP</span><b> 129 </b><span style="text-decoration: line-through;">349</span></p>
+                                        </div>
+                                    </div>
+                                </a>
                                 <div class="add-to-cart">
                                     <div>
                                         <p>4.8</p>
                                         <i class="fa-regular fa-star"></i>
                                     </div>
                                     <button class="soundButton"><i class="fa-solid fa-cart-shopping"></i></button>
+                                    <audio id="buttonSound" src="../sounds/button-pressed-38129.mp3"></audio>
                                 </div>
                             </div>
-
-                            <div class="card-item">
-                                <div class="product-image">
-                                    <img src="../images\products\books\5.avif" alt="">
-                                </div>
-                                <div class="product-details">
-                                    <p class="product-name">Anker - Charging Cable</p>
-                                    <p class="product-price"><span>EGP</span><b> 129 </b><span style="text-decoration: line-through;">349</span></p>
-                                </div>
+                        
+                            <div class="card-item-wrapper">
+                                <a href="../single-product/index.html" class="card-item-link">
+                                    <div class="card-item">
+                                        <div class="product-image">
+                                            <img src="../images\products\books\5.avif" alt="">
+                                        </div>
+                                        <div class="product-details">
+                                            <p class="product-name">Anker - Charging Cable</p>
+                                            <p class="product-price"><span>EGP</span><b> 129 </b><span style="text-decoration: line-through;">349</span></p>
+                                        </div>
+                                    </div>
+                                </a>
                                 <div class="add-to-cart">
                                     <div>
                                         <p>4.8</p>
                                         <i class="fa-regular fa-star"></i>
                                     </div>
                                     <button class="soundButton"><i class="fa-solid fa-cart-shopping"></i></button>
+                                    <audio id="buttonSound" src="../sounds/button-pressed-38129.mp3"></audio>
                                 </div>
                             </div>
-
                         </div>
+                        
 
                         
                     </div>
@@ -620,92 +732,117 @@
                             <button>shop now</button>
                         </div>
                         <div class="card-items">
-                            <div class="card-item">
-                                <div class="product-image">
-                                    <img src="../images\products\kitchen\1.avif" alt="">
-                                </div>
-                                <div class="product-details">
-                                    <p class="product-name">Anker - Charging Cable</p>
-                                    <p class="product-price"><span>EGP</span><b> 129 </b><span style="text-decoration: line-through;">349</span></p>
-                                </div>
+                            <div class="card-item-wrapper">
+                                <a href="../single-product/index.html" class="card-item-link">
+                                    <div class="card-item">
+                                        <div class="product-image">
+                                            <img src="../images\products\kitchen\1.avif" alt="">
+                                        </div>
+                                        <div class="product-details">
+                                            <p class="product-name">Anker - Charging Cable</p>
+                                            <p class="product-price"><span>EGP</span><b> 129 </b><span style="text-decoration: line-through;">349</span></p>
+                                        </div>
+                                    </div>
+                                </a>
                                 <div class="add-to-cart">
                                     <div>
                                         <p>4.8</p>
                                         <i class="fa-regular fa-star"></i>
                                     </div>
                                     <button class="soundButton"><i class="fa-solid fa-cart-shopping"></i></button>
+                                    <audio id="buttonSound" src="../sounds/button-pressed-38129.mp3"></audio>
                                 </div>
                             </div>
-
-                            <div class="card-item">
-                                <div class="product-image">
-                                    <img src="../images\products\kitchen\2.avif" alt="">
-                                </div>
-                                <div class="product-details">
-                                    <p class="product-name">Anker - Charging Cable</p>
-                                    <p class="product-price"><span>EGP</span><b> 129 </b><span style="text-decoration: line-through;">349</span></p>
-                                </div>
+                        
+                            <div class="card-item-wrapper">
+                                <a href="../single-product/index.html" class="card-item-link">
+                                    <div class="card-item">
+                                        <div class="product-image">
+                                            <img src="../images\products\kitchen\2.avif" alt="">
+                                        </div>
+                                        <div class="product-details">
+                                            <p class="product-name">Anker - Charging Cable</p>
+                                            <p class="product-price"><span>EGP</span><b> 129 </b><span style="text-decoration: line-through;">349</span></p>
+                                        </div>
+                                    </div>
+                                </a>
                                 <div class="add-to-cart">
                                     <div>
                                         <p>4.8</p>
                                         <i class="fa-regular fa-star"></i>
                                     </div>
                                     <button class="soundButton"><i class="fa-solid fa-cart-shopping"></i></button>
+                                    <audio id="buttonSound" src="../sounds/button-pressed-38129.mp3"></audio>
                                 </div>
                             </div>
-
-                            <div class="card-item">
-                                <div class="product-image">
-                                    <img src="../images\products\kitchen\3.avif" alt="">
-                                </div>
-                                <div class="product-details">
-                                    <p class="product-name">Anker - Charging Cable</p>
-                                    <p class="product-price"><span>EGP</span><b> 129 </b><span style="text-decoration: line-through;">349</span></p>
-                                </div>
+                        
+                            <div class="card-item-wrapper">
+                                <a href="../single-product/index.html" class="card-item-link">
+                                    <div class="card-item">
+                                        <div class="product-image">
+                                            <img src="../images\products\kitchen\3.avif" alt="">
+                                        </div>
+                                        <div class="product-details">
+                                            <p class="product-name">Anker - Charging Cable</p>
+                                            <p class="product-price"><span>EGP</span><b> 129 </b><span style="text-decoration: line-through;">349</span></p>
+                                        </div>
+                                    </div>
+                                </a>
                                 <div class="add-to-cart">
                                     <div>
                                         <p>4.8</p>
                                         <i class="fa-regular fa-star"></i>
                                     </div>
                                     <button class="soundButton"><i class="fa-solid fa-cart-shopping"></i></button>
+                                    <audio id="buttonSound" src="../sounds/button-pressed-38129.mp3"></audio>
                                 </div>
                             </div>
-
-                            <div class="card-item">
-                                <div class="product-image">
-                                    <img src="../images\products\kitchen\4.avif" alt="">
-                                </div>
-                                <div class="product-details">
-                                    <p class="product-name">Anker - Charging Cable</p>
-                                    <p class="product-price"><span>EGP</span><b> 129 </b><span style="text-decoration: line-through;">349</span></p>
-                                </div>
+                        
+                            <div class="card-item-wrapper">
+                                <a href="../single-product/index.html" class="card-item-link">
+                                    <div class="card-item">
+                                        <div class="product-image">
+                                            <img src="../images\products\kitchen\4.avif" alt="">
+                                        </div>
+                                        <div class="product-details">
+                                            <p class="product-name">Anker - Charging Cable</p>
+                                            <p class="product-price"><span>EGP</span><b> 129 </b><span style="text-decoration: line-through;">349</span></p>
+                                        </div>
+                                    </div>
+                                </a>
                                 <div class="add-to-cart">
                                     <div>
                                         <p>4.8</p>
                                         <i class="fa-regular fa-star"></i>
                                     </div>
                                     <button class="soundButton"><i class="fa-solid fa-cart-shopping"></i></button>
+                                    <audio id="buttonSound" src="../sounds/button-pressed-38129.mp3"></audio>
                                 </div>
                             </div>
-
-                            <div class="card-item">
-                                <div class="product-image">
-                                    <img src="../images\products\kitchen\5.avif" alt="">
-                                </div>
-                                <div class="product-details">
-                                    <p class="product-name">Anker - Charging Cable</p>
-                                    <p class="product-price"><span>EGP</span><b> 129 </b><span style="text-decoration: line-through;">349</span></p>
-                                </div>
+                        
+                            <div class="card-item-wrapper">
+                                <a href="../single-product/index.html" class="card-item-link">
+                                    <div class="card-item">
+                                        <div class="product-image">
+                                            <img src="../images\products\kitchen\5.avif" alt="">
+                                        </div>
+                                        <div class="product-details">
+                                            <p class="product-name">Anker - Charging Cable</p>
+                                            <p class="product-price"><span>EGP</span><b> 129 </b><span style="text-decoration: line-through;">349</span></p>
+                                        </div>
+                                    </div>
+                                </a>
                                 <div class="add-to-cart">
                                     <div>
                                         <p>4.8</p>
                                         <i class="fa-regular fa-star"></i>
                                     </div>
                                     <button class="soundButton"><i class="fa-solid fa-cart-shopping"></i></button>
+                                    <audio id="buttonSound" src="../sounds/button-pressed-38129.mp3"></audio>
                                 </div>
                             </div>
-
                         </div>
+                        
 
                         
                     </div>
@@ -718,92 +855,117 @@
                             <button>shop now</button>
                         </div>
                         <div class="card-items">
-                            <div class="card-item">
-                                <div class="product-image">
-                                    <img src="../images\products\sports\1.avif" alt="">
-                                </div>
-                                <div class="product-details">
-                                    <p class="product-name">Anker - Charging Cable</p>
-                                    <p class="product-price"><span>EGP</span><b> 129 </b><span style="text-decoration: line-through;">349</span></p>
-                                </div>
+                            <div class="card-item-wrapper">
+                                <a href="../single-product/index.html" class="card-item-link">
+                                    <div class="card-item">
+                                        <div class="product-image">
+                                            <img src="../images\products\sports\1.avif" alt="">
+                                        </div>
+                                        <div class="product-details">
+                                            <p class="product-name">Anker - Charging Cable</p>
+                                            <p class="product-price"><span>EGP</span><b> 129 </b><span style="text-decoration: line-through;">349</span></p>
+                                        </div>
+                                    </div>
+                                </a>
                                 <div class="add-to-cart">
                                     <div>
                                         <p>4.8</p>
                                         <i class="fa-regular fa-star"></i>
                                     </div>
                                     <button class="soundButton"><i class="fa-solid fa-cart-shopping"></i></button>
+                                    <audio id="buttonSound" src="../sounds/button-pressed-38129.mp3"></audio>
                                 </div>
                             </div>
-
-                            <div class="card-item">
-                                <div class="product-image">
-                                    <img src="../images\products\sports\2.avif" alt="">
-                                </div>
-                                <div class="product-details">
-                                    <p class="product-name">Anker - Charging Cable</p>
-                                    <p class="product-price"><span>EGP</span><b> 129 </b><span style="text-decoration: line-through;">349</span></p>
-                                </div>
+                        
+                            <div class="card-item-wrapper">
+                                <a href="../single-product/index.html" class="card-item-link">
+                                    <div class="card-item">
+                                        <div class="product-image">
+                                            <img src="../images\products\sports\2.avif" alt="">
+                                        </div>
+                                        <div class="product-details">
+                                            <p class="product-name">Anker - Charging Cable</p>
+                                            <p class="product-price"><span>EGP</span><b> 129 </b><span style="text-decoration: line-through;">349</span></p>
+                                        </div>
+                                    </div>
+                                </a>
                                 <div class="add-to-cart">
                                     <div>
                                         <p>4.8</p>
                                         <i class="fa-regular fa-star"></i>
                                     </div>
                                     <button class="soundButton"><i class="fa-solid fa-cart-shopping"></i></button>
+                                    <audio id="buttonSound" src="../sounds/button-pressed-38129.mp3"></audio>
                                 </div>
                             </div>
-
-                            <div class="card-item">
-                                <div class="product-image">
-                                    <img src="../images\products\sports\3.avif" alt="">
-                                </div>
-                                <div class="product-details">
-                                    <p class="product-name">Anker - Charging Cable</p>
-                                    <p class="product-price"><span>EGP</span><b> 129 </b><span style="text-decoration: line-through;">349</span></p>
-                                </div>
+                        
+                            <div class="card-item-wrapper">
+                                <a href="../single-product/index.html" class="card-item-link">
+                                    <div class="card-item">
+                                        <div class="product-image">
+                                            <img src="../images\products\sports\3.avif" alt="">
+                                        </div>
+                                        <div class="product-details">
+                                            <p class="product-name">Anker - Charging Cable</p>
+                                            <p class="product-price"><span>EGP</span><b> 129 </b><span style="text-decoration: line-through;">349</span></p>
+                                        </div>
+                                    </div>
+                                </a>
                                 <div class="add-to-cart">
                                     <div>
                                         <p>4.8</p>
                                         <i class="fa-regular fa-star"></i>
                                     </div>
                                     <button class="soundButton"><i class="fa-solid fa-cart-shopping"></i></button>
+                                    <audio id="buttonSound" src="../sounds/button-pressed-38129.mp3"></audio>
                                 </div>
                             </div>
-
-                            <div class="card-item">
-                                <div class="product-image">
-                                    <img src="../images\products\sports\4.avif" alt="">
-                                </div>
-                                <div class="product-details">
-                                    <p class="product-name">Anker - Charging Cable</p>
-                                    <p class="product-price"><span>EGP</span><b> 129 </b><span style="text-decoration: line-through;">349</span></p>
-                                </div>
+                        
+                            <div class="card-item-wrapper">
+                                <a href="../single-product/index.html" class="card-item-link">
+                                    <div class="card-item">
+                                        <div class="product-image">
+                                            <img src="../images\products\sports\4.avif" alt="">
+                                        </div>
+                                        <div class="product-details">
+                                            <p class="product-name">Anker - Charging Cable</p>
+                                            <p class="product-price"><span>EGP</span><b> 129 </b><span style="text-decoration: line-through;">349</span></p>
+                                        </div>
+                                    </div>
+                                </a>
                                 <div class="add-to-cart">
                                     <div>
                                         <p>4.8</p>
                                         <i class="fa-regular fa-star"></i>
                                     </div>
                                     <button class="soundButton"><i class="fa-solid fa-cart-shopping"></i></button>
+                                    <audio id="buttonSound" src="../sounds/button-pressed-38129.mp3"></audio>
                                 </div>
                             </div>
-
-                            <div class="card-item">
-                                <div class="product-image">
-                                    <img src="../images\products\sports\5.avif" alt="">
-                                </div>
-                                <div class="product-details">
-                                    <p class="product-name">Anker - Charging Cable</p>
-                                    <p class="product-price"><span>EGP</span><b> 129 </b><span style="text-decoration: line-through;">349</span></p>
-                                </div>
+                        
+                            <div class="card-item-wrapper">
+                                <a href="../single-product/index.html" class="card-item-link">
+                                    <div class="card-item">
+                                        <div class="product-image">
+                                            <img src="../images\products\sports\5.avif" alt="">
+                                        </div>
+                                        <div class="product-details">
+                                            <p class="product-name">Anker - Charging Cable</p>
+                                            <p class="product-price"><span>EGP</span><b> 129 </b><span style="text-decoration: line-through;">349</span></p>
+                                        </div>
+                                    </div>
+                                </a>
                                 <div class="add-to-cart">
                                     <div>
                                         <p>4.8</p>
                                         <i class="fa-regular fa-star"></i>
                                     </div>
                                     <button class="soundButton"><i class="fa-solid fa-cart-shopping"></i></button>
+                                    <audio id="buttonSound" src="../sounds/button-pressed-38129.mp3"></audio>
                                 </div>
                             </div>
-
                         </div>
+                        
 
                         
                     </div>
@@ -816,92 +978,117 @@
                             <button>shop now</button>
                         </div>
                         <div class="card-items">
-                            <div class="card-item">
-                                <div class="product-image">
-                                    <img src="../images\products\baby\1.avif" alt="">
-                                </div>
-                                <div class="product-details">
-                                    <p class="product-name">Anker - Charging Cable</p>
-                                    <p class="product-price"><span>EGP</span><b> 129 </b><span style="text-decoration: line-through;">349</span></p>
-                                </div>
+                            <div class="card-item-wrapper">
+                                <a href="../single-product/index.html" class="card-item-link">
+                                    <div class="card-item">
+                                        <div class="product-image">
+                                            <img src="../images\products\baby\1.avif" alt="">
+                                        </div>
+                                        <div class="product-details">
+                                            <p class="product-name">Anker - Charging Cable</p>
+                                            <p class="product-price"><span>EGP</span><b> 129 </b><span style="text-decoration: line-through;">349</span></p>
+                                        </div>
+                                    </div>
+                                </a>
                                 <div class="add-to-cart">
                                     <div>
                                         <p>4.8</p>
                                         <i class="fa-regular fa-star"></i>
                                     </div>
                                     <button class="soundButton"><i class="fa-solid fa-cart-shopping"></i></button>
+                                    <audio id="buttonSound" src="../sounds/button-pressed-38129.mp3"></audio>
                                 </div>
                             </div>
-
-                            <div class="card-item">
-                                <div class="product-image">
-                                    <img src="../images\products\baby\2.avif" alt="">
-                                </div>
-                                <div class="product-details">
-                                    <p class="product-name">Anker - Charging Cable</p>
-                                    <p class="product-price"><span>EGP</span><b> 129 </b><span style="text-decoration: line-through;">349</span></p>
-                                </div>
+                        
+                            <div class="card-item-wrapper">
+                                <a href="../single-product/index.html" class="card-item-link">
+                                    <div class="card-item">
+                                        <div class="product-image">
+                                            <img src="../images\products\baby\2.avif" alt="">
+                                        </div>
+                                        <div class="product-details">
+                                            <p class="product-name">Anker - Charging Cable</p>
+                                            <p class="product-price"><span>EGP</span><b> 129 </b><span style="text-decoration: line-through;">349</span></p>
+                                        </div>
+                                    </div>
+                                </a>
                                 <div class="add-to-cart">
                                     <div>
                                         <p>4.8</p>
                                         <i class="fa-regular fa-star"></i>
                                     </div>
                                     <button class="soundButton"><i class="fa-solid fa-cart-shopping"></i></button>
+                                    <audio id="buttonSound" src="../sounds/button-pressed-38129.mp3"></audio>
                                 </div>
                             </div>
-
-                            <div class="card-item">
-                                <div class="product-image">
-                                    <img src="../images\products\baby\3.avif" alt="">
-                                </div>
-                                <div class="product-details">
-                                    <p class="product-name">Anker - Charging Cable</p>
-                                    <p class="product-price"><span>EGP</span><b> 129 </b><span style="text-decoration: line-through;">349</span></p>
-                                </div>
+                        
+                            <div class="card-item-wrapper">
+                                <a href="../single-product/index.html" class="card-item-link">
+                                    <div class="card-item">
+                                        <div class="product-image">
+                                            <img src="../images\products\baby\3.avif" alt="">
+                                        </div>
+                                        <div class="product-details">
+                                            <p class="product-name">Anker - Charging Cable</p>
+                                            <p class="product-price"><span>EGP</span><b> 129 </b><span style="text-decoration: line-through;">349</span></p>
+                                        </div>
+                                    </div>
+                                </a>
                                 <div class="add-to-cart">
                                     <div>
                                         <p>4.8</p>
                                         <i class="fa-regular fa-star"></i>
                                     </div>
                                     <button class="soundButton"><i class="fa-solid fa-cart-shopping"></i></button>
+                                    <audio id="buttonSound" src="../sounds/button-pressed-38129.mp3"></audio>
                                 </div>
                             </div>
-
-                            <div class="card-item">
-                                <div class="product-image">
-                                    <img src="../images\products\baby\4.avif" alt="">
-                                </div>
-                                <div class="product-details">
-                                    <p class="product-name">Anker - Charging Cable</p>
-                                    <p class="product-price"><span>EGP</span><b> 129 </b><span style="text-decoration: line-through;">349</span></p>
-                                </div>
+                        
+                            <div class="card-item-wrapper">
+                                <a href="../single-product/index.html" class="card-item-link">
+                                    <div class="card-item">
+                                        <div class="product-image">
+                                            <img src="../images\products\baby\4.avif" alt="">
+                                        </div>
+                                        <div class="product-details">
+                                            <p class="product-name">Anker - Charging Cable</p>
+                                            <p class="product-price"><span>EGP</span><b> 129 </b><span style="text-decoration: line-through;">349</span></p>
+                                        </div>
+                                    </div>
+                                </a>
                                 <div class="add-to-cart">
                                     <div>
                                         <p>4.8</p>
                                         <i class="fa-regular fa-star"></i>
                                     </div>
                                     <button class="soundButton"><i class="fa-solid fa-cart-shopping"></i></button>
+                                    <audio id="buttonSound" src="../sounds/button-pressed-38129.mp3"></audio>
                                 </div>
                             </div>
-
-                            <div class="card-item">
-                                <div class="product-image">
-                                    <img src="../images\products\baby\5.avif" alt="">
-                                </div>
-                                <div class="product-details">
-                                    <p class="product-name">Anker - Charging Cable</p>
-                                    <p class="product-price"><span>EGP</span><b> 129 </b><span style="text-decoration: line-through;">349</span></p>
-                                </div>
+                        
+                            <div class="card-item-wrapper">
+                                <a href="../single-product/index.html" class="card-item-link">
+                                    <div class="card-item">
+                                        <div class="product-image">
+                                            <img src="../images\products\baby\5.avif" alt="">
+                                        </div>
+                                        <div class="product-details">
+                                            <p class="product-name">Anker - Charging Cable</p>
+                                            <p class="product-price"><span>EGP</span><b> 129 </b><span style="text-decoration: line-through;">349</span></p>
+                                        </div>
+                                    </div>
+                                </a>
                                 <div class="add-to-cart">
                                     <div>
                                         <p>4.8</p>
                                         <i class="fa-regular fa-star"></i>
                                     </div>
                                     <button class="soundButton"><i class="fa-solid fa-cart-shopping"></i></button>
+                                    <audio id="buttonSound" src="../sounds/button-pressed-38129.mp3"></audio>
                                 </div>
                             </div>
-
                         </div>
+                        
 
                         
                     </div>
@@ -914,92 +1101,117 @@
                             <button>shop now</button>
                         </div>
                         <div class="card-items">
-                            <div class="card-item">
-                                <div class="product-image">
-                                    <img src="../images\products\beauty\1.avif" alt="">
-                                </div>
-                                <div class="product-details">
-                                    <p class="product-name">Anker - Charging Cable</p>
-                                    <p class="product-price"><span>EGP</span><b> 129 </b><span style="text-decoration: line-through;">349</span></p>
-                                </div>
+                            <div class="card-item-wrapper">
+                                <a href="../single-product/index.html" class="card-item-link">
+                                    <div class="card-item">
+                                        <div class="product-image">
+                                            <img src="../images\products\beauty\1.avif" alt="">
+                                        </div>
+                                        <div class="product-details">
+                                            <p class="product-name">Anker - Charging Cable</p>
+                                            <p class="product-price"><span>EGP</span><b> 129 </b><span style="text-decoration: line-through;">349</span></p>
+                                        </div>
+                                    </div>
+                                </a>
                                 <div class="add-to-cart">
                                     <div>
                                         <p>4.8</p>
                                         <i class="fa-regular fa-star"></i>
                                     </div>
                                     <button class="soundButton"><i class="fa-solid fa-cart-shopping"></i></button>
+                                    <audio id="buttonSound" src="../sounds/button-pressed-38129.mp3"></audio>
                                 </div>
                             </div>
-
-                            <div class="card-item">
-                                <div class="product-image">
-                                    <img src="../images\products\beauty\2.avif" alt="">
-                                </div>
-                                <div class="product-details">
-                                    <p class="product-name">Anker - Charging Cable</p>
-                                    <p class="product-price"><span>EGP</span><b> 129 </b><span style="text-decoration: line-through;">349</span></p>
-                                </div>
+                        
+                            <div class="card-item-wrapper">
+                                <a href="../single-product/index.html" class="card-item-link">
+                                    <div class="card-item">
+                                        <div class="product-image">
+                                            <img src="../images\products\beauty\2.avif" alt="">
+                                        </div>
+                                        <div class="product-details">
+                                            <p class="product-name">Anker - Charging Cable</p>
+                                            <p class="product-price"><span>EGP</span><b> 129 </b><span style="text-decoration: line-through;">349</span></p>
+                                        </div>
+                                    </div>
+                                </a>
                                 <div class="add-to-cart">
                                     <div>
                                         <p>4.8</p>
                                         <i class="fa-regular fa-star"></i>
                                     </div>
                                     <button class="soundButton"><i class="fa-solid fa-cart-shopping"></i></button>
+                                    <audio id="buttonSound" src="../sounds/button-pressed-38129.mp3"></audio>
                                 </div>
                             </div>
-
-                            <div class="card-item">
-                                <div class="product-image">
-                                    <img src="../images\products\beauty\3.avif" alt="">
-                                </div>
-                                <div class="product-details">
-                                    <p class="product-name">Anker - Charging Cable</p>
-                                    <p class="product-price"><span>EGP</span><b> 129 </b><span style="text-decoration: line-through;">349</span></p>
-                                </div>
+                        
+                            <div class="card-item-wrapper">
+                                <a href="../single-product/index.html" class="card-item-link">
+                                    <div class="card-item">
+                                        <div class="product-image">
+                                            <img src="../images\products\beauty\3.avif" alt="">
+                                        </div>
+                                        <div class="product-details">
+                                            <p class="product-name">Anker - Charging Cable</p>
+                                            <p class="product-price"><span>EGP</span><b> 129 </b><span style="text-decoration: line-through;">349</span></p>
+                                        </div>
+                                    </div>
+                                </a>
                                 <div class="add-to-cart">
                                     <div>
                                         <p>4.8</p>
                                         <i class="fa-regular fa-star"></i>
                                     </div>
                                     <button class="soundButton"><i class="fa-solid fa-cart-shopping"></i></button>
+                                    <audio id="buttonSound" src="../sounds/button-pressed-38129.mp3"></audio>
                                 </div>
                             </div>
-
-                            <div class="card-item">
-                                <div class="product-image">
-                                    <img src="../images\products\beauty\4.avif" alt="">
-                                </div>
-                                <div class="product-details">
-                                    <p class="product-name">Anker - Charging Cable</p>
-                                    <p class="product-price"><span>EGP</span><b> 129 </b><span style="text-decoration: line-through;">349</span></p>
-                                </div>
+                        
+                            <div class="card-item-wrapper">
+                                <a href="../single-product/index.html" class="card-item-link">
+                                    <div class="card-item">
+                                        <div class="product-image">
+                                            <img src="../images\products\beauty\4.avif" alt="">
+                                        </div>
+                                        <div class="product-details">
+                                            <p class="product-name">Anker - Charging Cable</p>
+                                            <p class="product-price"><span>EGP</span><b> 129 </b><span style="text-decoration: line-through;">349</span></p>
+                                        </div>
+                                    </div>
+                                </a>
                                 <div class="add-to-cart">
                                     <div>
                                         <p>4.8</p>
                                         <i class="fa-regular fa-star"></i>
                                     </div>
                                     <button class="soundButton"><i class="fa-solid fa-cart-shopping"></i></button>
+                                    <audio id="buttonSound" src="../sounds/button-pressed-38129.mp3"></audio>
                                 </div>
                             </div>
-
-                            <div class="card-item">
-                                <div class="product-image">
-                                    <img src="../images\products\beauty\5.avif" alt="">
-                                </div>
-                                <div class="product-details">
-                                    <p class="product-name">Anker - Charging Cable</p>
-                                    <p class="product-price"><span>EGP</span><b> 129 </b><span style="text-decoration: line-through;">349</span></p>
-                                </div>
+                        
+                            <div class="card-item-wrapper">
+                                <a href="../single-product/index.html" class="card-item-link">
+                                    <div class="card-item">
+                                        <div class="product-image">
+                                            <img src="../images\products\beauty\5.avif" alt="">
+                                        </div>
+                                        <div class="product-details">
+                                            <p class="product-name">Anker - Charging Cable</p>
+                                            <p class="product-price"><span>EGP</span><b> 129 </b><span style="text-decoration: line-through;">349</span></p>
+                                        </div>
+                                    </div>
+                                </a>
                                 <div class="add-to-cart">
                                     <div>
                                         <p>4.8</p>
                                         <i class="fa-regular fa-star"></i>
                                     </div>
                                     <button class="soundButton"><i class="fa-solid fa-cart-shopping"></i></button>
+                                    <audio id="buttonSound" src="../sounds/button-pressed-38129.mp3"></audio>
                                 </div>
                             </div>
-
                         </div>
+                        
 
                         
                     </div>
@@ -1012,92 +1224,117 @@
                             <button>shop now</button>
                         </div>
                         <div class="card-items">
-                            <div class="card-item">
-                                <div class="product-image">
-                                    <img src="../images\products\health\1.avif" alt="">
-                                </div>
-                                <div class="product-details">
-                                    <p class="product-name">Anker - Charging Cable</p>
-                                    <p class="product-price"><span>EGP</span><b> 129 </b><span style="text-decoration: line-through;">349</span></p>
-                                </div>
+                            <div class="card-item-wrapper">
+                                <a href="../single-product/index.html" class="card-item-link">
+                                    <div class="card-item">
+                                        <div class="product-image">
+                                            <img src="../images\products\health\1.avif" alt="">
+                                        </div>
+                                        <div class="product-details">
+                                            <p class="product-name">Anker - Charging Cable</p>
+                                            <p class="product-price"><span>EGP</span><b> 129 </b><span style="text-decoration: line-through;">349</span></p>
+                                        </div>
+                                    </div>
+                                </a>
                                 <div class="add-to-cart">
                                     <div>
                                         <p>4.8</p>
                                         <i class="fa-regular fa-star"></i>
                                     </div>
                                     <button class="soundButton"><i class="fa-solid fa-cart-shopping"></i></button>
+                                    <audio id="buttonSound" src="../sounds/button-pressed-38129.mp3"></audio>
                                 </div>
                             </div>
-
-                            <div class="card-item">
-                                <div class="product-image">
-                                    <img src="../images\products\health\2.avif" alt="">
-                                </div>
-                                <div class="product-details">
-                                    <p class="product-name">Anker - Charging Cable</p>
-                                    <p class="product-price"><span>EGP</span><b> 129 </b><span style="text-decoration: line-through;">349</span></p>
-                                </div>
+                        
+                            <div class="card-item-wrapper">
+                                <a href="../single-product/index.html" class="card-item-link">
+                                    <div class="card-item">
+                                        <div class="product-image">
+                                            <img src="../images\products\health\2.avif" alt="">
+                                        </div>
+                                        <div class="product-details">
+                                            <p class="product-name">Anker - Charging Cable</p>
+                                            <p class="product-price"><span>EGP</span><b> 129 </b><span style="text-decoration: line-through;">349</span></p>
+                                        </div>
+                                    </div>
+                                </a>
                                 <div class="add-to-cart">
                                     <div>
                                         <p>4.8</p>
                                         <i class="fa-regular fa-star"></i>
                                     </div>
                                     <button class="soundButton"><i class="fa-solid fa-cart-shopping"></i></button>
+                                    <audio id="buttonSound" src="../sounds/button-pressed-38129.mp3"></audio>
                                 </div>
                             </div>
-
-                            <div class="card-item">
-                                <div class="product-image">
-                                    <img src="../images\products\health\3.avif" alt="">
-                                </div>
-                                <div class="product-details">
-                                    <p class="product-name">Anker - Charging Cable</p>
-                                    <p class="product-price"><span>EGP</span><b> 129 </b><span style="text-decoration: line-through;">349</span></p>
-                                </div>
+                        
+                            <div class="card-item-wrapper">
+                                <a href="../single-product/index.html" class="card-item-link">
+                                    <div class="card-item">
+                                        <div class="product-image">
+                                            <img src="../images\products\health\3.avif" alt="">
+                                        </div>
+                                        <div class="product-details">
+                                            <p class="product-name">Anker - Charging Cable</p>
+                                            <p class="product-price"><span>EGP</span><b> 129 </b><span style="text-decoration: line-through;">349</span></p>
+                                        </div>
+                                    </div>
+                                </a>
                                 <div class="add-to-cart">
                                     <div>
                                         <p>4.8</p>
                                         <i class="fa-regular fa-star"></i>
                                     </div>
                                     <button class="soundButton"><i class="fa-solid fa-cart-shopping"></i></button>
+                                    <audio id="buttonSound" src="../sounds/button-pressed-38129.mp3"></audio>
                                 </div>
                             </div>
-
-                            <div class="card-item">
-                                <div class="product-image">
-                                    <img src="../images\products\health\4.avif" alt="">
-                                </div>
-                                <div class="product-details">
-                                    <p class="product-name">Anker - Charging Cable</p>
-                                    <p class="product-price"><span>EGP</span><b> 129 </b><span style="text-decoration: line-through;">349</span></p>
-                                </div>
+                        
+                            <div class="card-item-wrapper">
+                                <a href="../single-product/index.html" class="card-item-link">
+                                    <div class="card-item">
+                                        <div class="product-image">
+                                            <img src="../images\products\health\4.avif" alt="">
+                                        </div>
+                                        <div class="product-details">
+                                            <p class="product-name">Anker - Charging Cable</p>
+                                            <p class="product-price"><span>EGP</span><b> 129 </b><span style="text-decoration: line-through;">349</span></p>
+                                        </div>
+                                    </div>
+                                </a>
                                 <div class="add-to-cart">
                                     <div>
                                         <p>4.8</p>
                                         <i class="fa-regular fa-star"></i>
                                     </div>
                                     <button class="soundButton"><i class="fa-solid fa-cart-shopping"></i></button>
+                                    <audio id="buttonSound" src="../sounds/button-pressed-38129.mp3"></audio>
                                 </div>
                             </div>
-
-                            <div class="card-item">
-                                <div class="product-image">
-                                    <img src="../images\products\health\5.avif" alt="">
-                                </div>
-                                <div class="product-details">
-                                    <p class="product-name">Anker - Charging Cable</p>
-                                    <p class="product-price"><span>EGP</span><b> 129 </b><span style="text-decoration: line-through;">349</span></p>
-                                </div>
+                        
+                            <div class="card-item-wrapper">
+                                <a href="../single-product/index.html" class="card-item-link">
+                                    <div class="card-item">
+                                        <div class="product-image">
+                                            <img src="../images\products\health\5.avif" alt="">
+                                        </div>
+                                        <div class="product-details">
+                                            <p class="product-name">Anker - Charging Cable</p>
+                                            <p class="product-price"><span>EGP</span><b> 129 </b><span style="text-decoration: line-through;">349</span></p>
+                                        </div>
+                                    </div>
+                                </a>
                                 <div class="add-to-cart">
                                     <div>
                                         <p>4.8</p>
                                         <i class="fa-regular fa-star"></i>
                                     </div>
                                     <button class="soundButton"><i class="fa-solid fa-cart-shopping"></i></button>
+                                    <audio id="buttonSound" src="../sounds/button-pressed-38129.mp3"></audio>
                                 </div>
                             </div>
-
                         </div>
+                        
 
                         
                     </div>
@@ -1110,92 +1347,117 @@
                             <button>shop now</button>
                         </div>
                         <div class="card-items">
-                            <div class="card-item">
-                                <div class="product-image">
-                                    <img src="../images\products\grocery\1.avif" alt="">
-                                </div>
-                                <div class="product-details">
-                                    <p class="product-name">Anker - Charging Cable</p>
-                                    <p class="product-price"><span>EGP</span><b> 129 </b><span style="text-decoration: line-through;">349</span></p>
-                                </div>
+                            <div class="card-item-wrapper">
+                                <a href="../single-product/index.html" class="card-item-link">
+                                    <div class="card-item">
+                                        <div class="product-image">
+                                            <img src="../images\products\grocery\1.avif" alt="">
+                                        </div>
+                                        <div class="product-details">
+                                            <p class="product-name">Anker - Charging Cable</p>
+                                            <p class="product-price"><span>EGP</span><b> 129 </b><span style="text-decoration: line-through;">349</span></p>
+                                        </div>
+                                    </div>
+                                </a>
                                 <div class="add-to-cart">
                                     <div>
                                         <p>4.8</p>
                                         <i class="fa-regular fa-star"></i>
                                     </div>
                                     <button class="soundButton"><i class="fa-solid fa-cart-shopping"></i></button>
+                                    <audio id="buttonSound" src="../sounds/button-pressed-38129.mp3"></audio>
                                 </div>
                             </div>
-
-                            <div class="card-item">
-                                <div class="product-image">
-                                    <img src="../images\products\grocery\2.avif" alt="">
-                                </div>
-                                <div class="product-details">
-                                    <p class="product-name">Anker - Charging Cable</p>
-                                    <p class="product-price"><span>EGP</span><b> 129 </b><span style="text-decoration: line-through;">349</span></p>
-                                </div>
+                        
+                            <div class="card-item-wrapper">
+                                <a href="../single-product/index.html" class="card-item-link">
+                                    <div class="card-item">
+                                        <div class="product-image">
+                                            <img src="../images\products\grocery\2.avif" alt="">
+                                        </div>
+                                        <div class="product-details">
+                                            <p class="product-name">Anker - Charging Cable</p>
+                                            <p class="product-price"><span>EGP</span><b> 129 </b><span style="text-decoration: line-through;">349</span></p>
+                                        </div>
+                                    </div>
+                                </a>
                                 <div class="add-to-cart">
                                     <div>
                                         <p>4.8</p>
                                         <i class="fa-regular fa-star"></i>
                                     </div>
                                     <button class="soundButton"><i class="fa-solid fa-cart-shopping"></i></button>
+                                    <audio id="buttonSound" src="../sounds/button-pressed-38129.mp3"></audio>
                                 </div>
                             </div>
-
-                            <div class="card-item">
-                                <div class="product-image">
-                                    <img src="../images\products\grocery\3.avif" alt="">
-                                </div>
-                                <div class="product-details">
-                                    <p class="product-name">Anker - Charging Cable</p>
-                                    <p class="product-price"><span>EGP</span><b> 129 </b><span style="text-decoration: line-through;">349</span></p>
-                                </div>
+                        
+                            <div class="card-item-wrapper">
+                                <a href="../single-product/index.html" class="card-item-link">
+                                    <div class="card-item">
+                                        <div class="product-image">
+                                            <img src="../images\products\grocery\3.avif" alt="">
+                                        </div>
+                                        <div class="product-details">
+                                            <p class="product-name">Anker - Charging Cable</p>
+                                            <p class="product-price"><span>EGP</span><b> 129 </b><span style="text-decoration: line-through;">349</span></p>
+                                        </div>
+                                    </div>
+                                </a>
                                 <div class="add-to-cart">
                                     <div>
                                         <p>4.8</p>
                                         <i class="fa-regular fa-star"></i>
                                     </div>
                                     <button class="soundButton"><i class="fa-solid fa-cart-shopping"></i></button>
+                                    <audio id="buttonSound" src="../sounds/button-pressed-38129.mp3"></audio>
                                 </div>
                             </div>
-
-                            <div class="card-item">
-                                <div class="product-image">
-                                    <img src="../images\products\grocery\4.avif" alt="">
-                                </div>
-                                <div class="product-details">
-                                    <p class="product-name">Anker - Charging Cable</p>
-                                    <p class="product-price"><span>EGP</span><b> 129 </b><span style="text-decoration: line-through;">349</span></p>
-                                </div>
+                        
+                            <div class="card-item-wrapper">
+                                <a href="../single-product/index.html" class="card-item-link">
+                                    <div class="card-item">
+                                        <div class="product-image">
+                                            <img src="../images\products\grocery\4.avif" alt="">
+                                        </div>
+                                        <div class="product-details">
+                                            <p class="product-name">Anker - Charging Cable</p>
+                                            <p class="product-price"><span>EGP</span><b> 129 </b><span style="text-decoration: line-through;">349</span></p>
+                                        </div>
+                                    </div>
+                                </a>
                                 <div class="add-to-cart">
                                     <div>
                                         <p>4.8</p>
                                         <i class="fa-regular fa-star"></i>
                                     </div>
                                     <button class="soundButton"><i class="fa-solid fa-cart-shopping"></i></button>
+                                    <audio id="buttonSound" src="../sounds/button-pressed-38129.mp3"></audio>
                                 </div>
                             </div>
-
-                            <div class="card-item">
-                                <div class="product-image">
-                                    <img src="../images\products\grocery\5.avif" alt="">
-                                </div>
-                                <div class="product-details">
-                                    <p class="product-name">Anker - Charging Cable</p>
-                                    <p class="product-price"><span>EGP</span><b> 129 </b><span style="text-decoration: line-through;">349</span></p>
-                                </div>
+                        
+                            <div class="card-item-wrapper">
+                                <a href="../single-product/index.html" class="card-item-link">
+                                    <div class="card-item">
+                                        <div class="product-image">
+                                            <img src="../images\products\grocery\5.avif" alt="">
+                                        </div>
+                                        <div class="product-details">
+                                            <p class="product-name">Anker - Charging Cable</p>
+                                            <p class="product-price"><span>EGP</span><b> 129 </b><span style="text-decoration: line-through;">349</span></p>
+                                        </div>
+                                    </div>
+                                </a>
                                 <div class="add-to-cart">
                                     <div>
                                         <p>4.8</p>
                                         <i class="fa-regular fa-star"></i>
                                     </div>
                                     <button class="soundButton"><i class="fa-solid fa-cart-shopping"></i></button>
+                                    <audio id="buttonSound" src="../sounds/button-pressed-38129.mp3"></audio>
                                 </div>
                             </div>
-
                         </div>
+                        
 
                         
                     </div>
@@ -1224,7 +1486,7 @@
                                     <button class="soundButton"><i class="fa-solid fa-cart-shopping"></i></button>
                                 </div>
                             </div>
-
+                        
                             <div class="card-item">
                                 <div class="product-image">
                                     <img src="../images\products\office\2.avif" alt="">
@@ -1241,7 +1503,7 @@
                                     <button class="soundButton"><i class="fa-solid fa-cart-shopping"></i></button>
                                 </div>
                             </div>
-
+                        
                             <div class="card-item">
                                 <div class="product-image">
                                     <img src="../images\products\office\3.avif" alt="">
@@ -1258,7 +1520,7 @@
                                     <button class="soundButton"><i class="fa-solid fa-cart-shopping"></i></button>
                                 </div>
                             </div>
-
+                        
                             <div class="card-item">
                                 <div class="product-image">
                                     <img src="../images\products\office\4.avif" alt="">
@@ -1275,7 +1537,7 @@
                                     <button class="soundButton"><i class="fa-solid fa-cart-shopping"></i></button>
                                 </div>
                             </div>
-
+                        
                             <div class="card-item">
                                 <div class="product-image">
                                     <img src="../images\products\office\5.avif" alt="">
@@ -1292,8 +1554,8 @@
                                     <button class="soundButton"><i class="fa-solid fa-cart-shopping"></i></button>
                                 </div>
                             </div>
-
                         </div>
+                        
 
                         
                     </div>
@@ -1322,7 +1584,7 @@
                                     <button class="soundButton"><i class="fa-solid fa-cart-shopping"></i></button>
                                 </div>
                             </div>
-
+                        
                             <div class="card-item">
                                 <div class="product-image">
                                     <img src="../images\products\pets\2.avif" alt="">
@@ -1339,7 +1601,7 @@
                                     <button class="soundButton"><i class="fa-solid fa-cart-shopping"></i></button>
                                 </div>
                             </div>
-
+                        
                             <div class="card-item">
                                 <div class="product-image">
                                     <img src="../images\products\pets\3.avif" alt="">
@@ -1356,7 +1618,7 @@
                                     <button class="soundButton"><i class="fa-solid fa-cart-shopping"></i></button>
                                 </div>
                             </div>
-
+                        
                             <div class="card-item">
                                 <div class="product-image">
                                     <img src="../images\products\pets\4.avif" alt="">
@@ -1373,7 +1635,7 @@
                                     <button class="soundButton"><i class="fa-solid fa-cart-shopping"></i></button>
                                 </div>
                             </div>
-
+                        
                             <div class="card-item">
                                 <div class="product-image">
                                     <img src="../images\products\pets\5.avif" alt="">
@@ -1390,8 +1652,8 @@
                                     <button class="soundButton"><i class="fa-solid fa-cart-shopping"></i></button>
                                 </div>
                             </div>
-
                         </div>
+                        
 
                         
                     </div>
@@ -1420,7 +1682,7 @@
                                     <button class="soundButton"><i class="fa-solid fa-cart-shopping"></i></button>
                                 </div>
                             </div>
-
+                        
                             <div class="card-item">
                                 <div class="product-image">
                                     <img src="../images\products\health\2.avif" alt="">
@@ -1437,7 +1699,7 @@
                                     <button class="soundButton"><i class="fa-solid fa-cart-shopping"></i></button>
                                 </div>
                             </div>
-
+                        
                             <div class="card-item">
                                 <div class="product-image">
                                     <img src="../images\products\health\3.avif" alt="">
@@ -1454,7 +1716,7 @@
                                     <button class="soundButton"><i class="fa-solid fa-cart-shopping"></i></button>
                                 </div>
                             </div>
-
+                        
                             <div class="card-item">
                                 <div class="product-image">
                                     <img src="../images\products\health\4.avif" alt="">
@@ -1471,7 +1733,7 @@
                                     <button class="soundButton"><i class="fa-solid fa-cart-shopping"></i></button>
                                 </div>
                             </div>
-
+                        
                             <div class="card-item">
                                 <div class="product-image">
                                     <img src="../images\products\health\5.avif" alt="">
@@ -1488,8 +1750,8 @@
                                     <button class="soundButton"><i class="fa-solid fa-cart-shopping"></i></button>
                                 </div>
                             </div>
-
                         </div>
+                        
                         <div class="card-items">
                             <div class="card-item">
                                 <div class="product-image">
@@ -1507,7 +1769,7 @@
                                     <button class="soundButton"><i class="fa-solid fa-cart-shopping"></i></button>
                                 </div>
                             </div>
-
+                        
                             <div class="card-item">
                                 <div class="product-image">
                                     <img src="../images\products\health\2.avif" alt="">
@@ -1524,7 +1786,7 @@
                                     <button class="soundButton"><i class="fa-solid fa-cart-shopping"></i></button>
                                 </div>
                             </div>
-
+                        
                             <div class="card-item">
                                 <div class="product-image">
                                     <img src="../images\products\health\3.avif" alt="">
@@ -1541,7 +1803,7 @@
                                     <button class="soundButton"><i class="fa-solid fa-cart-shopping"></i></button>
                                 </div>
                             </div>
-
+                        
                             <div class="card-item">
                                 <div class="product-image">
                                     <img src="../images\products\health\4.avif" alt="">
@@ -1558,7 +1820,7 @@
                                     <button class="soundButton"><i class="fa-solid fa-cart-shopping"></i></button>
                                 </div>
                             </div>
-
+                        
                             <div class="card-item">
                                 <div class="product-image">
                                     <img src="../images\products\health\5.avif" alt="">
@@ -1575,8 +1837,8 @@
                                     <button class="soundButton"><i class="fa-solid fa-cart-shopping"></i></button>
                                 </div>
                             </div>
-
                         </div>
+                        
                         
                     </div>
                 </div>
